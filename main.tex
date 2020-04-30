@@ -1,0 +1,51 @@
+\documentclass[oneside]{discothesis}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENT METADATA
+
+\thesistype{A MEng Project Final Report} % Master's Thesis, Bachelor's Thesis, Semester Thesis, Group Project
+\title{Clock and Data Recovery over Optical Links and Networks}
+
+\author{Ammar Bin Shaqeel Ahmed}
+\email{ammar.ahmed.16@ucl.ac.uk \\ 16080322}
+
+\institute{University College London}
+
+% Optionally, you can put in your own logo here
+%logo{\includegraphics[width=0.2\columnwidth]{figures/disco_logo_faded}}
+
+\supervisors{Dr. Georgios Zervas}
+\assessor{Dr. Domaniç Lavery}
+
+% Optionally, keywords and categories of the work can be shown (on the Abstract page)
+%\keywords{Keywords go here.}
+%\categories{ACM categories go here.}
+
+\date{May, 2020}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter % do not remove this line
+\maketitle
+\cleardoublepage
+
+\tableofcontents
+
+\mainmatter % do not remove this line
+
+% Start writing here
+\include{chp/intro}
+\include{chp/theory}
+\include{chp/objectives}
+\include{chp/method}
+\include{chp/conclusion}
+
+% This displays the bibliography for all cited external documents. All references have to be defined in the file references.bib and can then be cited from within this document.
+\bibliographystyle{IEEEtran}
+\bibliography{ref}
+
+% This creates an appendix chapter, comment if not needed.
+%\appendix
+
+\end{document}

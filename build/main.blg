@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (MiKTeX 2.9.7380 64-bit)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: chp/intro.aux
+A level-1 auxiliary file: chp/theory.aux
+A level-1 auxiliary file: chp/objectives.aux
+A level-1 auxiliary file: chp/method.aux
+A level-1 auxiliary file: chp/conclusion.aux
+The style file: IEEEtran.bst
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Reallocating 'wiz_functions' (item size: 4) to 6000 items.
+Reallocating 'singl_function' (item size: 4) to 100 items.
+Database file #1: ref.bib
+-- IEEEtran.bst version 1.12 (2007/01/11) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in serrano2013white
+
+Done.
+You've used 17 entries,
+            4024 wiz_defined-function locations,
+            917 strings with 11388 characters,
+and the built_in function-call counts, 12951 in all, are:
+= -- 985
+> -- 421
+< -- 79
++ -- 214
+- -- 88
+* -- 641
+:= -- 1917
+add.period$ -- 38
+call.type$ -- 17
+change.case$ -- 15
+chr.to.int$ -- 168
+cite$ -- 18
+duplicate$ -- 957
+empty$ -- 1049
+format.name$ -- 103
+if$ -- 2971
+int.to.chr$ -- 0
+int.to.str$ -- 17
+missing$ -- 198
+newline$ -- 78
+num.names$ -- 17
+pop$ -- 488
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 976
+stack$ -- 0
+substring$ -- 433
+swap$ -- 755
+text.length$ -- 23
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 17
+warning$ -- 1
+while$ -- 56
+width$ -- 19
+write$ -- 184
+(There was 1 warning)
