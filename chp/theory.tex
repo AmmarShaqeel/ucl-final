@@ -13,12 +13,19 @@ This process is known as Clock and Data Recovery (CDR).
 In this application a bang-bang CDR circuit is used. 
 In this case transitions in a received data signal are counted as "early" or
 "late" as compared with a local clock. The clock can then be adjusted based on
-the local transitions\cite{alexander1975clock}.
+the local transitions~\cite{alexander1975clock}.
+\TODO{Image of bang-bang CDR}
 
 \subsubsection{Source Synchronous System}%
 \label{ssub:source_synchronous_system}
 In a source synchronous system a clock signal is provided alongside the data
-signal. This allows us.
+signal. 
+
+\subsubsection{PRBS Generation}%
+\label{ssub:prbs_generation}
+A pseudorandom binary sequence (PRBS) is a sequence of bits that appears to be
+random. However as it is generated using a deterministic algorithim, it can be
+replicated if the inital conditions are the same.
 
 \section{Literature Review}%
 \label{sec:literature_review}
@@ -26,13 +33,14 @@ signal. This allows us.
 \noindent \cite{kari_phase} outlines how CDR circuits are a limiting factor in
 optical switching and proposes a method of overcoming this (phase caching).
 Through phase caching they were able to demonstrate sub nanosecond locking
-times, improving the locking time 12x.
+times, improving the locking time 12x. This is a different approach that seeks
+to solve the same problem.
 
 \noindent In \cite{serrano2013white}, \cite{moreira2010digital}, and
 \cite{moreira2009white}, the white rabbit project is discussed. A white rabbit
 system provides sub-nanosecond synchronisation accuracy. To achieve this,
 accurate measurements of the link delay between the nodes of the network must
-be calculated.  While instructive, the method may not be directly applicable to
+be calculated.  While instructive, the method is not directly applicable to
 the project, as in a White Rabbit system, all the nodes are locked to the same
 frequency. Hence the link delay can be calculated by having a node receive a
 clock signal from another node, then return the same signal. The link delay can
@@ -41,31 +49,30 @@ then be calculated by comparing the phase offset of the two signals.
 \noindent \cite{williams2016source} described an optical source synchronous
 system. It describes how choosing the correct wavelength for the clock can
 minimise the modal cross-talk. Furthermore, in conjunction with
-\cite{ragab2011receiver} it was quite instructive in describing how source
-synchronous systems are able to track correlated jitter between clock and data
-channels, and how system performance can be degraded by channel slew between
-clock and data channels.\\ \cite{williams2019reconfiguration} further explored
-reducing the modal crosstalk by proposing an architecture with re-configurable
-clock and data paths, thus allowing the user to chose the optimal lane for the
-sensitive clock for each photonic interconnect. This may not be needed however,
-as each transmitter should have a fixed data characteristic.
+\cite{ragab2011receiver} it describes how source synchronous systems are able
+to track correlated jitter between clock and data channels, and how system
+performance can be degraded by channel slew between clock and data channels.\\
+\cite{williams2019reconfiguration} further explored reducing the modal
+crosstalk by proposing an architecture with re-configurable clock and data
+paths, thus allowing the user to chose the optimal lane for the sensitive clock
+for each photonic interconnect. This may not be needed however, as each
+transmitter should have a fixed data characteristic.
 
 \noindent \cite{chen2017optimization} and \cite{fixed_latency} describe fixed
-latency links. There is a possibility that we will be unable to completely
-bypass the CDR. In this case if we can organise the system to have fixed
-latency, we could force the CDR to the appropriate fixed phase. Thus the
-circuit would then be able to have a stable source-synchronous link.
+latency links. In the event we were unable to bypass the CDR, it may be
+possible to organise the system to have a fixed latency, then force the CDR to
+the appropriate fixed phase. Thus the circuit could thus have a much reduced
+CDR lock time.
 
 \noindent \cite{dru_guide}, \cite{nidru} describe an intellectual property (IP)
 that allows the high speed serial transceivers to be used at much lower data
 rates. This was initially of interest because it would have been easier to
 demonstrate a working system with lower data rates. However as this is an extra
-IP used in conjunction with the transceivers it may not be useful for the
-project. 
+IP used in conjunction with the transceivers it did not turn out to be useful
+for the project. 
 
 \noindent \cite{mendes_transceiver} this presentation describes a system where
 the phase of a transceiver on Xilinx board is kept stable over resets. While
-this was done primarily on the transmitter side (we are interested in the
-receiver side) this still shows that fixing the phase of the transceiver is
-possible in some cases.
+this was done primarily on the transmitter side this still shows that fixing
+the phase of the transceiver is possible.
 

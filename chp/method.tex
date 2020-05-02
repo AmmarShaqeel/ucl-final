@@ -13,5 +13,8 @@ the VCU118 board. We looked to modify the functionality of a basic
 implementation of the  transceiver.
 
 The basic implementation is as follows:
-There is a PRBS generator which feeds wordbits to the transceiver. The
-transceiver receives these bits, serializes them, then transmits them
+There is a PRBS generator which feeds a series of bits to the transceiver. The
+transceiver serializes them, then transmits the bits. 
+On the reception side, the transceiver receives the bits, deserialises them,
+then compares the recieved bits with a local PRBS generator.
+
