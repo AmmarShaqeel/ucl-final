@@ -638,7 +638,7 @@
 		{\Huge \bfseries #1 \par\nobreak}
 		\vskip 30\p@
 		\hrule
-		\vskip 40\p@
+		\vskip 30\p@
 	\end{flushleft}\par}
 	
 \def\@schapter#1{\if@twocolumn
