@@ -137,4 +137,15 @@ P.~Novellini, G.~Guasti, and A.~Di~Fresco,
   \textsc{url:}~\url{https://indico.cern.ch/event/717613/contributions/2948664/attachments/1637690/2613637/hptd_fixed_phase_xcvr_04_18_eduardo_mendes.pdf},
   2018.
 
+\bibitem{wizard_guide}
+\emph{\BIBforeignlanguage{English}{UltraScale FPGAs Transceivers Wizard v1.7}},
+  Xilinx.
+
+\bibitem{vcu118_guide}
+\emph{\BIBforeignlanguage{English}{VCU118 Evaluation Board}}, Xilinx.
+
+\bibitem{GTY_guide}
+\emph{\BIBforeignlanguage{English}{UltraScale Architecture GTY Transceivers}},
+  Xilinx.
+
 \end{thebibliography}

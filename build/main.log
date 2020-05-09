@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  7 MAY 2020 03:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  9 MAY 2020 03:46
 entering extended mode
 **./main.tex
 (main.tex
@@ -855,6 +855,122 @@ Package: wrapfig 2003/01/31  v 3.6
 )
 Package: chemfig 2020/03/05 v1.5 Draw molecule with an easy syntax (CT)
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/minted\minted.sty"
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/fvextra\fvextra.sty"
+Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty"
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count328
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/fancyvrb\fancyvrb.sty"
+Package: fancyvrb 2020/01/13 v3.5 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count329
+\FV@InFile=\read3
+\FV@TabBox=\box119
+\c@FancyVerbLine=\count330
+\FV@StepNumber=\count331
+\FV@OutFile=\write4
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/lineno\lineno.sty"
+Package: lineno 2005/11/02 line numbers on paragraphs v4.41
+\linenopenalty=\count332
+\output=\toks45
+\linenoprevgraf=\count333
+\linenumbersep=\dimen321
+\linenumberwidth=\dimen322
+\c@linenumber=\count334
+\c@pagewiselinenumber=\count335
+\c@LN@truepage=\count336
+\c@internallinenumber=\count337
+\c@internallinenumbers=\count338
+\quotelinenumbersep=\dimen323
+\bframerule=\dimen324
+\bframesep=\dimen325
+\bframebox=\box120
+LaTeX Info: Redefining \\ on input line 3056.
+)
+\c@FV@TrueTabGroupLevel=\count339
+\c@FV@TrueTabCounter=\count340
+\FV@TabBox@Group=\box121
+\FV@TmpLength=\skip75
+\c@FV@HighlightLinesStart=\count341
+\c@FV@HighlightLinesStop=\count342
+\FV@LoopCount=\count343
+\FV@NCharsBox=\box122
+\FV@BreakIndent=\dimen326
+\FV@BreakIndentNChars=\count344
+\FV@BreakSymbolSepLeft=\dimen327
+\FV@BreakSymbolSepLeftNChars=\count345
+\FV@BreakSymbolSepRight=\dimen328
+\FV@BreakSymbolSepRightNChars=\count346
+\FV@BreakSymbolIndentLeft=\dimen329
+\FV@BreakSymbolIndentLeftNChars=\count347
+\FV@BreakSymbolIndentRight=\dimen330
+\FV@BreakSymbolIndentRightNChars=\count348
+\c@FancyVerbLineBreakLast=\count349
+\FV@LineBox=\box123
+\FV@LineIndentBox=\box124
+\FV@LineWidth=\dimen331
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/tools\shellesc.sty"
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/ifplatform\ifplatform.sty"
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+("C:\Program Files\MiKTeX 2.9\tex/generic/catchfile\catchfile.sty"
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex/generic/iftex\ifluatex.sty"
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+))
+("C:\Program Files\MiKTeX 2.9\tex/latex/xstring\xstring.sty"
+("C:\Program Files\MiKTeX 2.9\tex/generic/xstring\xstring.tex"
+\integerpart=\count350
+\decimalpart=\count351
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip76
+\fb@frw=\dimen332
+\fb@frh=\dimen333
+\FrameRule=\dimen334
+\FrameSep=\dimen335
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count352
+\float@exts=\toks46
+\float@box=\box125
+\@float@everytoks=\toks47
+\@floatcapt=\box126
+)
+\minted@appexistsfile=\read4
+\minted@bgbox=\box127
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count353
+\c@minted@pygmentizecounter=\count354
+\@float@every@listing=\toks48
+\c@listing=\count355
+)
+runsystem(if not exist build\_minted-main mkdir build\_minted-main)...executed.
+
+runsystem(for ^%i in (pygmentize.exe pygmentize.bat pygmentize.cmd) do set > ma
+in.aex <nul: /p x=^%~$PATH:i>> main.aex)...executed.
+
+runsystem(del main.aex)...executed.
+
+
 (C:\Users\ammar_laptop\Documents\thesis\./build\main.aux
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/intro.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/theory.aux)
@@ -863,43 +979,43 @@ Package: chemfig 2020/03/05 v1.5 Draw molecule with an easy syntax (CT)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/conclusion.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 30.
+LaTeX Font Info:    ... okay on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count328
-\scratchdimen=\dimen321
-\scratchbox=\box119
-\nofMPsegments=\count329
-\nofMParguments=\count330
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count331
-\MPscratchDim=\dimen322
-\MPnumerator=\count332
-\makeMPintoPDFobject=\count333
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count356
+\scratchdimen=\dimen336
+\scratchbox=\box128
+\nofMPsegments=\count357
+\nofMParguments=\count358
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count359
+\MPscratchDim=\dimen337
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
+\everyMPtoPDFconversion=\toks50
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-\AtBeginShipoutBox=\box120
-Package hyperref Info: Link coloring ON on input line 27.
+\AtBeginShipoutBox=\box129
+Package hyperref Info: Link coloring ON on input line 30.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -910,21 +1026,22 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count334
+\c@section@level=\count362
 )
-LaTeX Info: Redefining \ref on input line 27.
-LaTeX Info: Redefining \pageref on input line 27.
-LaTeX Info: Redefining \nameref on input line 27.
+LaTeX Info: Redefining \ref on input line 30.
+LaTeX Info: Redefining \pageref on input line 30.
+LaTeX Info: Redefining \nameref on input line 30.
 
 (C:\Users\ammar_laptop\Documents\thesis\./build\main.out)
 (C:\Users\ammar_laptop\Documents\thesis\./build\main.out)
-\@outlinefile=\write4
-\openout4 = `main.out'.
+\@outlinefile=\write6
+\openout6 = `main.out'.
 
 
 ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package epstopdf Info: Source file: <img/ucl_banner.eps>
@@ -935,20 +1052,20 @@ Package epstopdf Info: Source file: <img/ucl_banner.eps>
 (epstopdf)                    size: 13038 bytes
 (epstopdf)             Command: <epstopdf --outfile=img/ucl_banner-eps-converte
 d-to.pdf img/ucl_banner.eps>
-(epstopdf)             \includegraphics on input line 31.
+(epstopdf)             \includegraphics on input line 34.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./img/ucl_banner-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ucl_banner-eps-converted-to.pdf, id=106, 598.235pt x 114.4275pt>
+<img/ucl_banner-eps-converted-to.pdf, id=114, 598.235pt x 114.4275pt>
 File: img/ucl_banner-eps-converted-to.pdf Graphic file (type pdf)
 <use img/ucl_banner-eps-converted-to.pdf>
 Package pdftex.def Info: img/ucl_banner-eps-converted-to.pdf  used on input lin
-e 31.
+e 34.
 (pdftex.def)             Requested size: 366.4pt x 70.08353pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-1.
+4.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
@@ -960,7 +1077,7 @@ g/ucl_banner-eps-converted-to.pdf>]pdfTeX warning (ext4): destination with the
 same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.48 \begin{abstract}
+l.51 \begin{abstract}
                       [1
 
 
@@ -978,8 +1095,8 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
 ("C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-\tf@toc=\write5
-\openout5 = `main.toc'.
+\tf@toc=\write7
+\openout7 = `main.toc'.
 
  [3
 
@@ -997,12 +1114,12 @@ Chapter 1.
 
  (chp/theory.tex
 Chapter 2.
-<img/cdr_basic.png, id=172, 2640.86626pt x 1035.87pt>
+<img/cdr_basic.png, id=182, 2640.86626pt x 1035.87pt>
 File: img/cdr_basic.png Graphic file (type png)
 <use img/cdr_basic.png>
 Package pdftex.def Info: img/cdr_basic.png  used on input line 22.
 (pdftex.def)             Requested size: 366.4pt x 143.7089pt.
-<img/bang_bang.png, id=177, 2180.145pt x 879.285pt>
+<img/bang_bang.png, id=187, 2180.145pt x 879.285pt>
 File: img/bang_bang.png Graphic file (type png)
 <use img/bang_bang.png>
 Package pdftex.def Info: img/bang_bang.png  used on input line 37.
@@ -1012,27 +1129,32 @@ Package pdftex.def Info: img/bang_bang.png  used on input line 37.
 
 
  <./img/cdr_basic.png>]
-<img/shift_reg.png, id=191, 951.555pt x 584.1825pt>
+<img/shift_reg.png, id=201, 951.555pt x 584.1825pt>
 File: img/shift_reg.png Graphic file (type png)
 <use img/shift_reg.png>
 Package pdftex.def Info: img/shift_reg.png  used on input line 57.
 (pdftex.def)             Requested size: 146.55775pt x 89.96794pt.
-<img/source_sync.png, id=195, 1586.92876pt x 487.8225pt>
+<img/source_sync.png, id=205, 1586.92876pt x 487.8225pt>
 File: img/source_sync.png Graphic file (type png)
 <use img/source_sync.png>
 Package pdftex.def Info: img/source_sync.png  used on input line 103.
-(pdftex.def)             Requested size: 293.12111pt x 90.10431pt.
+(pdftex.def)             Requested size: 183.2pt x 56.31055pt.
+<img/soa.png, id=206, 785.93625pt x 611.28375pt>
+File: img/soa.png Graphic file (type png)
+<use img/soa.png>
+Package pdftex.def Info: img/soa.png  used on input line 120.
+(pdftex.def)             Requested size: 146.55775pt x 113.99048pt.
  [3 <./img/bang_bang.png> <./img/shift_reg.png>]
-[4 <./img/source_sync.png>]) [5]
+[4 <./img/source_sync.png> <./img/soa.png>]) [5]
 \openout2 = `chp/objectives.aux'.
 
  (chp/objectives.tex
 Chapter 3.
-<img/overview.png, id=245, 3119.655pt x 1216.545pt>
+<img/overview.png, id=259, 3119.655pt x 1297.84875pt>
 File: img/overview.png Graphic file (type png)
 <use img/overview.png>
 Package pdftex.def Info: img/overview.png  used on input line 14.
-(pdftex.def)             Requested size: 366.4pt x 142.87909pt.
+(pdftex.def)             Requested size: 366.4pt x 152.42793pt.
 ) [6
 
 
@@ -1042,38 +1164,85 @@ Package pdftex.def Info: img/overview.png  used on input line 14.
 
  (chp/method.tex
 Chapter 4.
-<img/loopback.png, id=254, 1117.17375pt x 499.8675pt>
+<img/loopback.png, id=268, 1117.17375pt x 499.8675pt>
 File: img/loopback.png Graphic file (type png)
 <use img/loopback.png>
 Package pdftex.def Info: img/loopback.png  used on input line 11.
-(pdftex.def)             Requested size: 219.84222pt x 98.36235pt.
-<img/board.jpg, id=255, 572.1375pt x 391.4625pt>
+(pdftex.def)             Requested size: 183.2pt x 81.97116pt.
+<img/board.jpg, id=269, 391.4625pt x 293.59688pt>
 File: img/board.jpg Graphic file (type jpg)
 <use img/board.jpg>
 Package pdftex.def Info: img/board.jpg  used on input line 30.
-(pdftex.def)             Requested size: 146.55775pt x 100.27258pt.
-<img/clock.jpg, id=256, 281.05pt x 301.125pt>
+(pdftex.def)             Requested size: 183.2pt x 137.39919pt.
+<img/clock.jpg, id=270, 642.4pt x 689.57625pt>
 File: img/clock.jpg Graphic file (type jpg)
 <use img/clock.jpg>
-Package pdftex.def Info: img/clock.jpg  used on input line 37.
-(pdftex.def)             Requested size: 146.55775pt x 157.027pt.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 48.
+Package pdftex.def Info: img/clock.jpg  used on input line 39.
+(pdftex.def)             Requested size: 175.87444pt x 188.78702pt.
+<img/fmc.png, id=271, 181.42781pt x 303.38344pt>
+File: img/fmc.png Graphic file (type png)
+<use img/fmc.png>
+Package pdftex.def Info: img/fmc.png  used on input line 45.
+(pdftex.def)             Requested size: 87.93721pt x 147.05283pt.
 [7
 
 
 
- <./img/loopback.png> <./img/board.jpg>] [8 <./img/clock.jpg>]) [9]
+ <./img/loopback.png> <./img/board.jpg>] [8 <./img/clock.jpg> <./img/fmc.png>]
+<img/transmitter_block.png, id=291, 1199.98312pt x 586.44093pt>
+File: img/transmitter_block.png Graphic file (type png)
+<use img/transmitter_block.png>
+Package pdftex.def Info: img/transmitter_block.png  used on input line 117.
+(pdftex.def)             Requested size: 439.67886pt x 214.86792pt.
+
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 117--118
+ []| [] 
+ []
+
+[9 <./img/transmitter_block.png>]
+<img/burst_mode_1.png, id=307, 1043.39813pt x 209.28188pt>
+File: img/burst_mode_1.png Graphic file (type png)
+<use img/burst_mode_1.png>
+Package pdftex.def Info: img/burst_mode_1.png  used on input line 142.
+(pdftex.def)             Requested size: 549.59999pt x 110.23866pt.
+
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 142--143
+ []| [] 
+ []
+
+<img/burst_mode_2.png, id=310, 1047.16219pt x 188.95593pt>
+File: img/burst_mode_2.png Graphic file (type png)
+<use img/burst_mode_2.png>
+Package pdftex.def Info: img/burst_mode_2.png  used on input line 156.
+(pdftex.def)             Requested size: 549.59999pt x 99.1745pt.
+
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 156--157
+ []| [] 
+ []
+
+<img/burst_mode_3.png, id=311, 1038.12843pt x 191.21437pt>
+File: img/burst_mode_3.png Graphic file (type png)
+<use img/burst_mode_3.png>
+Package pdftex.def Info: img/burst_mode_3.png  used on input line 163.
+(pdftex.def)             Requested size: 549.59999pt x 101.22934pt.
+
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 163--164
+ []| [] 
+ []
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 176.
+[10 <./img/burst_mode_1.png> <./img/burst_mode_2.png>] [11 <./img/burst_mode_3.
+png>]) [12]
 \openout2 = `chp/conclusion.aux'.
 
-
-(chp/conclusion.tex
+ (chp/conclusion.tex
 Chapter 5.
-) [10
+) [13
 
 
 
-] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl [11
+] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl [14
 
 
 ]
@@ -1089,34 +1258,91 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
 37 / hptd _ xed _
  []
 
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
 )
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 92.
+(Font)              using `T1/cmr/m/sc' instead on input line 93.
 
-[12]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
+[15]
+<img/transceiver1.png, id=360, 1139.75812pt x 723.45282pt>
+File: img/transceiver1.png Graphic file (type png)
+<use img/transceiver1.png>
+Package pdftex.def Info: img/transceiver1.png  used on input line 103.
+(pdftex.def)             Requested size: 476.3211pt x 302.33577pt.
+
+Overfull \hbox (53.01561pt too wide) in paragraph at lines 103--104
+ []| [] 
+ []
+
+[1
+
+
+ <./img/transceiver1.png>]
+<img/transceiver2.png, id=369, 1130.72438pt x 809.27344pt>
+File: img/transceiver2.png Graphic file (type png)
+<use img/transceiver2.png>
+Package pdftex.def Info: img/transceiver2.png  used on input line 112.
+(pdftex.def)             Requested size: 476.3211pt x 340.9051pt.
+
+Overfull \hbox (53.01561pt too wide) in paragraph at lines 112--113
+ []| [] 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 117.
+
+[2 <./img/transceiver2.png>]
+\openout4 = `main.pyg'.
+
+ (build/_minted-main/default-pyg-prefix.pygstyle)
+(build/_minted-main/default.pygstyle)
+(build/_minted-main/5EBADBF3DE5EB67294148DC798AE37B8518A88E331BBBC9A25B5A18C67E
+AD7D1.pygtex)
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 176.
+
+
+LaTeX Warning: Float too large for page by 79.40274pt on input line 178.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 182.
+
+[3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (C:\Users\ammar_laptop\Documents\thesis\./build\main.aux
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/intro.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/theory.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/objectives.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/method.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B564C097AB97D9E8F3F56494B0B1332E;1197.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 92.
+(rerunfilecheck)             Checksum: E94D97189B1B33DF58CCCC80243D60E1;1326.
+runsystem(del build\\main.pyg)...executed.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 22053 strings out of 480894
- 428936 string characters out of 2908216
- 704797 words of memory out of 3000000
- 37364 multiletter control sequences out of 15000+200000
- 547110 words of font info for 51 fonts, out of 3000000 for 9000
+ 25292 strings out of 480894
+ 495051 string characters out of 2908216
+ 814627 words of memory out of 3000000
+ 40500 multiletter control sequences out of 15000+200000
+ 548504 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,10n,119p,417b,988s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 74i,10n,119p,1001b,991s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}{C:/Pro
 gram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX
@@ -1129,15 +1355,18 @@ b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx2074.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfbx2488.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/cm-super/sfcc1000.pfb><C:/Program Files/MiKTeX 
 2.9/fonts/type1/public/cm-super/sfcc1440.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/public/cm-super/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/cm-super/sfrm1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-s
-uper/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
-1440.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb>
-Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (16 pag
-es, 757193 bytes).
+/type1/public/cm-super/sfit1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
+blic/cm-super/sfrm0500.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-s
+uper/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
+1000.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1200.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm1440.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (22 pag
+es, 1846455 bytes).
 PDF statistics:
- 381 PDF objects out of 1000 (max. 8388607)
- 76 named destinations out of 1000 (max. 500000)
- 306 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 472 PDF objects out of 1000 (max. 8388607)
+ 99 named destinations out of 1000 (max. 500000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 

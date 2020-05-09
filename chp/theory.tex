@@ -100,21 +100,42 @@ of clock domains at the reciever as the transmitted clock will not be
 synchronous with the clock domain of the receiving device.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\linewidth]{img/source_sync.png}
+    \includegraphics[width=0.5\linewidth]{img/source_sync.png}
     \caption{Source Synchronous System}%
     \label{fig:source_sync}
 \end{figure}
+
+
+
+\subsubsection{Semiconductor Optical Amplifier}%
+\label{ssub:semiconductor_optical_amplifier}
+Optical amplifiers are devices that can amplify an optical signal without
+needing to convert it to an electrical one. 
+A silicon optical amplifier (SOA) is one that uses a semiconductor as the gain
+medium, as light passes through this gain medium it is amplified.
+SOAs are electrically pumped (do not require the use of another laser) and are of
+small size.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.4\linewidth]{img/soa.png}
+    \caption{Basic SOA Structure}%
+    \label{fig:soa}
+\end{figure}
+
+
 
 \section{Literature Review}%
 \label{sec:literature_review}
 
 \noindent \cite{kari_phase} outlines how CDR circuits are a limiting factor in
 optical switching and proposes a method of phase caching to overcome this.
-Here the phase of the local clock in relation to the data is cached.  The PRBS
-data is pregenerated (written to memory) and is sent in short bursts with a
-known sequence at the end. When the data arrives it is then written to memory
-and then processed.  The phase caching improved locking time on switching by 12
-times.
+The data is transferred over the high-speed Xilinx transceivers, and uses a
+bang-bang CDR. The phase measurments that are being compared are that of the
+recieved data to the local clock.
+The PRBS data is pregenerated (written to memory) and is sent in short bursts
+with a known sequence at the end. When the data arrives it is then written to
+memory and then processed.  The phase caching improved locking time on
+switching by 12 times.
 
 \noindent In \cite{serrano2013white}, \cite{moreira2010digital}, and
 \cite{moreira2009white}, the white rabbit project is discussed. A white rabbit

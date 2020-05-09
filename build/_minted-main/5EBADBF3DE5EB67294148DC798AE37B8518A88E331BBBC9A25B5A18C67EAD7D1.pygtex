@@ -1,0 +1,55 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AN41} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{mgtrefclk0\PYGZus{}x0y1\PYGZus{}n}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AN40} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{mgtrefclk0\PYGZus{}x0y1\PYGZus{}p}\PYG{p}{]}
+
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{DIFF\PYGZus{}SSTL12} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}in\PYGZus{}p}\PYG{p}{]}
+
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AY23} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}in\PYGZus{}n}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AY24} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}in\PYGZus{}p}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{DIFF\PYGZus{}SSTL12} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}in\PYGZus{}n}\PYG{p}{]}
+
+\PYG{n}{set\PYGZus{}property} \PYG{n}{package\PYGZus{}pin} \PYG{n}{BE23} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}all\PYGZus{}in}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{LVCMOS18} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}all\PYGZus{}in}\PYG{p}{]}
+
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{BB24} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}down\PYGZus{}latched\PYGZus{}reset\PYGZus{}in}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{LVCMOS18} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}down\PYGZus{}latched\PYGZus{}reset\PYGZus{}in}\PYG{p}{]}
+
+
+\PYG{c+cp}{\PYGZsh{} LED1 (working correctly)}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AV34} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}status\PYGZus{}out}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{LVCMOS12} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}status\PYGZus{}out}\PYG{p}{]}
+
+\PYG{c+cp}{\PYGZsh{} LED0 (not working)}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{PACKAGE\PYGZus{}PIN} \PYG{n}{AT32} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}down\PYGZus{}latched\PYGZus{}out}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{IOSTANDARD} \PYG{n}{LVCMOS12} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{link\PYGZus{}down\PYGZus{}latched\PYGZus{}out}\PYG{p}{]}
+
+\PYG{c+cp}{\PYGZsh{} Clock constraints for clocks provided as inputs to the core}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{create\PYGZus{}clock} \PYG{o}{\PYGZhy{}}\PYG{n}{period} \PYG{l+m+mf}{8.000} \PYG{o}{\PYGZhy{}}\PYG{n}{name} \PYG{n}{clk\PYGZus{}freerun} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}in\PYGZus{}p}\PYG{p}{]}
+\PYG{n}{create\PYGZus{}clock} \PYG{o}{\PYGZhy{}}\PYG{n}{period} \PYG{l+m+mf}{6.400} \PYG{o}{\PYGZhy{}}\PYG{n}{name} \PYG{n}{clk\PYGZus{}mgtrefclk0\PYGZus{}x0y1\PYGZus{}p} \PYG{p}{[}\PYG{n}{get\PYGZus{}ports} \PYG{n}{mgtrefclk0\PYGZus{}x0y1\PYGZus{}p}\PYG{p}{]}
+
+\PYG{c+cp}{\PYGZsh{} False path constraints \PYGZsh{}}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells} \PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}}
+\PYG{o}{*}\PYG{n}{bit\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{i\PYGZus{}in\PYGZus{}meta\PYGZus{}reg}\PYG{p}{\PYGZcb{}]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells} \PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}}
+\PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}}\PYG{o}{*}\PYG{n}{\PYGZus{}reg}\PYG{p}{\PYGZcb{}]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{D} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}meta}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{PRE} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}meta}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{PRE} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}sync1}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{PRE} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}sync2}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{PRE} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}sync3}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+\PYG{n}{set\PYGZus{}false\PYGZus{}path} \PYG{o}{\PYGZhy{}}\PYG{n}{to} \PYG{p}{[}\PYG{n}{get\PYGZus{}pins} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{n}{REF\PYGZus{}PIN\PYGZus{}NAME}\PYG{o}{=\PYGZti{}*}\PYG{n}{PRE} \PYG{o}{\PYGZhy{}}\PYG{n}{of\PYGZus{}objects} \PYG{p}{[}\PYG{n}{get\PYGZus{}cells}
+\PYG{o}{\PYGZhy{}}\PYG{n}{hierarchical} \PYG{o}{\PYGZhy{}}\PYG{n}{filter} \PYG{p}{\PYGZob{}}\PYG{n}{NAME} \PYG{o}{=\PYGZti{}} \PYG{o}{*}\PYG{n}{reset\PYGZus{}synchronizer}\PYG{o}{*}\PYG{n}{inst}\PYG{o}{/}\PYG{n}{rst\PYGZus{}in\PYGZus{}out}\PYG{o}{*}\PYG{p}{\PYGZcb{}]]}
+
+
+\PYG{n}{set\PYGZus{}property} \PYG{n}{C\PYGZus{}CLK\PYGZus{}INPUT\PYGZus{}FREQ\PYGZus{}HZ} \PYG{l+m+mi}{300000000} \PYG{p}{[}\PYG{n}{get\PYGZus{}debug\PYGZus{}cores} \PYG{n}{dbg\PYGZus{}hub}\PYG{p}{]}
+\PYG{n}{set\PYGZus{}property} \PYG{n}{C\PYGZus{}ENABLE\PYGZus{}CLK\PYGZus{}DIVIDER} \PYG{n+nb}{false} \PYG{p}{[}\PYG{n}{get\PYGZus{}debug\PYGZus{}cores} \PYG{n}{dbg\PYGZus{}hub}\PYG{p}{]} \PYG{n}{set\PYGZus{}property}
+\PYG{n}{C\PYGZus{}USER\PYGZus{}SCAN\PYGZus{}CHAIN} \PYG{l+m+mi}{1} \PYG{p}{[}\PYG{n}{get\PYGZus{}debug\PYGZus{}cores} \PYG{n}{dbg\PYGZus{}hub}\PYG{p}{]} \PYG{n}{connect\PYGZus{}debug\PYGZus{}port} \PYG{n}{dbg\PYGZus{}hub}\PYG{o}{/}\PYG{n}{clk}
+\PYG{p}{[}\PYG{n}{get\PYGZus{}nets} \PYG{n}{hb\PYGZus{}gtwiz\PYGZus{}reset\PYGZus{}clk\PYGZus{}freerun\PYGZus{}buf\PYGZus{}int}\PYG{p}{]}
+\end{Verbatim}
