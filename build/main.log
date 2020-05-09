@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  9 MAY 2020 03:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  9 MAY 2020 16:47
 entering extended mode
 **./main.tex
 (main.tex
@@ -1189,60 +1189,106 @@ Package pdftex.def Info: img/fmc.png  used on input line 45.
 
 
  <./img/loopback.png> <./img/board.jpg>] [8 <./img/clock.jpg> <./img/fmc.png>]
-<img/transmitter_block.png, id=291, 1199.98312pt x 586.44093pt>
-File: img/transmitter_block.png Graphic file (type png)
-<use img/transmitter_block.png>
-Package pdftex.def Info: img/transmitter_block.png  used on input line 117.
-(pdftex.def)             Requested size: 439.67886pt x 214.86792pt.
-
-Overfull \hbox (44.82613pt too wide) in paragraph at lines 117--118
+Overfull \hbox (98.46465pt too wide) in paragraph at lines 99--118
  []| [] 
  []
 
-[9 <./img/transmitter_block.png>]
+<img/transmitter_block.png, id=292, 1199.98312pt x 586.44093pt>
+File: img/transmitter_block.png Graphic file (type png)
+<use img/transmitter_block.png>
+Package pdftex.def Info: img/transmitter_block.png  used on input line 150.
+(pdftex.def)             Requested size: 439.67886pt x 214.86792pt.
+
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 150--151
+ []| [] 
+ []
+
+[9]
 <img/burst_mode_1.png, id=307, 1043.39813pt x 209.28188pt>
 File: img/burst_mode_1.png Graphic file (type png)
 <use img/burst_mode_1.png>
-Package pdftex.def Info: img/burst_mode_1.png  used on input line 142.
+Package pdftex.def Info: img/burst_mode_1.png  used on input line 179.
 (pdftex.def)             Requested size: 549.59999pt x 110.23866pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 142--143
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 179--180
  []| [] 
  []
 
-<img/burst_mode_2.png, id=310, 1047.16219pt x 188.95593pt>
+[10 <./img/transmitter_block.png> <./img/burst_mode_1.png>]
+<img/burst_mode_2.png, id=321, 1047.16219pt x 188.95593pt>
 File: img/burst_mode_2.png Graphic file (type png)
 <use img/burst_mode_2.png>
-Package pdftex.def Info: img/burst_mode_2.png  used on input line 156.
+Package pdftex.def Info: img/burst_mode_2.png  used on input line 193.
 (pdftex.def)             Requested size: 549.59999pt x 99.1745pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 156--157
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 193--194
  []| [] 
  []
 
-<img/burst_mode_3.png, id=311, 1038.12843pt x 191.21437pt>
+<img/burst_mode_3.png, id=322, 1038.12843pt x 191.21437pt>
 File: img/burst_mode_3.png Graphic file (type png)
 <use img/burst_mode_3.png>
-Package pdftex.def Info: img/burst_mode_3.png  used on input line 163.
+Package pdftex.def Info: img/burst_mode_3.png  used on input line 200.
 (pdftex.def)             Requested size: 549.59999pt x 101.22934pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 163--164
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 200--201
  []| [] 
  []
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 176.
-[10 <./img/burst_mode_1.png> <./img/burst_mode_2.png>] [11 <./img/burst_mode_3.
-png>]) [12]
+ine 213.
+<img/receiver_block.png, id=324, 796.47563pt x 344.78813pt>
+File: img/receiver_block.png Graphic file (type png)
+<use img/receiver_block.png>
+Package pdftex.def Info: img/receiver_block.png  used on input line 224.
+(pdftex.def)             Requested size: 439.67886pt x 190.33377pt.
+
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 224--225
+ []| [] 
+ []
+
+<img/burst_check.png, id=328, 1041.1397pt x 173.89969pt>
+File: img/burst_check.png Graphic file (type png)
+<use img/burst_check.png>
+Package pdftex.def Info: img/burst_check.png  used on input line 242.
+(pdftex.def)             Requested size: 549.59999pt x 91.79755pt.
+
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 242--243
+ []| [] 
+ []
+
+[11 <./img/burst_mode_2.png> <./img/burst_mode_3.png>]
+<img/burst_check_2.png, id=342, 1035.11719pt x 194.97844pt>
+File: img/burst_check_2.png Graphic file (type png)
+<use img/burst_check_2.png>
+Package pdftex.def Info: img/burst_check_2.png  used on input line 256.
+(pdftex.def)             Requested size: 549.59999pt x 103.52847pt.
+
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 256--257
+ []| [] 
+ []
+
+<img/cdr_detail.png, id=344, 904.1278pt x 273.27094pt>
+File: img/cdr_detail.png Graphic file (type png)
+<use img/cdr_detail.png>
+Package pdftex.def Info: img/cdr_detail.png  used on input line 275.
+(pdftex.def)             Requested size: 439.67886pt x 132.89066pt.
+
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 275--276
+ []| [] 
+ []
+
+[12 <./img/receiver_block.png> <./img/burst_check.png>] [13 <./img/burst_check_
+2.png> <./img/cdr_detail.png>]) [14]
 \openout2 = `chp/conclusion.aux'.
 
  (chp/conclusion.tex
 Chapter 5.
-) [13
+) [15
 
 
 
-] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl [14
+] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl [16
 
 
 ]
@@ -1272,8 +1318,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 93.
 
-[15]
-<img/transceiver1.png, id=360, 1139.75812pt x 723.45282pt>
+[17]
+<img/transceiver1.png, id=387, 1139.75812pt x 723.45282pt>
 File: img/transceiver1.png Graphic file (type png)
 <use img/transceiver1.png>
 Package pdftex.def Info: img/transceiver1.png  used on input line 103.
@@ -1287,7 +1333,7 @@ Overfull \hbox (53.01561pt too wide) in paragraph at lines 103--104
 
 
  <./img/transceiver1.png>]
-<img/transceiver2.png, id=369, 1130.72438pt x 809.27344pt>
+<img/transceiver2.png, id=396, 1130.72438pt x 809.27344pt>
 File: img/transceiver2.png Graphic file (type png)
 <use img/transceiver2.png>
 Package pdftex.def Info: img/transceiver2.png  used on input line 112.
@@ -1302,44 +1348,59 @@ LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 117.
 
 [2 <./img/transceiver2.png>]
-\openout4 = `main.pyg'.
+<img/clock_settings.png, id=403, 657.2053pt x 430.60875pt>
+File: img/clock_settings.png Graphic file (type png)
+<use img/clock_settings.png>
+Package pdftex.def Info: img/clock_settings.png  used on input line 121.
+(pdftex.def)             Requested size: 476.3211pt x 312.09464pt.
 
- (build/_minted-main/default-pyg-prefix.pygstyle)
-(build/_minted-main/default.pygstyle)
-(build/_minted-main/5EBADBF3DE5EB67294148DC798AE37B8518A88E331BBBC9A25B5A18C67E
-AD7D1.pygtex)
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 176.
-
-
-LaTeX Warning: Float too large for page by 79.40274pt on input line 178.
+Overfull \hbox (53.01561pt too wide) in paragraph at lines 121--122
+ []| [] 
+ []
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 182.
+(Font)              using `T1/cmr/m/sc' instead on input line 126.
 
-[3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+[3 <./img/clock_settings.png>]
+\openout4 = `main.pyg'.
+
+ (build/_minted-main/default-pyg-prefix.pygstyle) (build/_minted-main/default.p
+ygstyle)
+(build/_minted-main/5EBADBF3DE5EB67294148DC798AE37B8518A88E331BBBC9A25B5A18C67E
+AD7D1.pygtex)
+Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
+t line 185.
+
+
+LaTeX Warning: Float too large for page by 79.40274pt on input line 187.
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 191.
+
+[4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
  (C:\Users\ammar_laptop\Documents\thesis\./build\main.aux
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/intro.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/theory.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/objectives.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/method.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 191.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 191.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E94D97189B1B33DF58CCCC80243D60E1;1326.
+(rerunfilecheck)             Checksum: 1CC1BBDC042960D5ADE65391599C537F;1326.
 runsystem(del build\\main.pyg)...executed.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 25292 strings out of 480894
- 495051 string characters out of 2908216
- 814627 words of memory out of 3000000
- 40500 multiletter control sequences out of 15000+200000
+ 25330 strings out of 480894
+ 495805 string characters out of 2908216
+ 814841 words of memory out of 3000000
+ 40525 multiletter control sequences out of 15000+200000
  548504 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  74i,10n,119p,1001b,991s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1363,10 +1424,10 @@ uper/sfrm0800.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
 am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb><C:/Program Files/
 MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (22 pag
-es, 1846455 bytes).
+Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (25 pag
+es, 2007521 bytes).
 PDF statistics:
- 472 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 362 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 508 PDF objects out of 1000 (max. 8388607)
+ 107 named destinations out of 1000 (max. 500000)
+ 387 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -73,29 +73,62 @@ There are 52 transceivers on VCU118 board, in total.
     \item Twenty-four of the GTY transceivers are wired to FMC+ HSPC connector
 \end{itemize}
 
-As the we were using a FMC-HSMP module, we were limited to the transceivers wired
+As we were using a FMC-HSMP module to connect to the transceivers, we were limited to the transceivers wired
 to the FMC+ HSPC connector.
-Furthermore only certain quads can be driven through an external clock - also
-there are limitations to the number of quads that can be driven with an
+Furthermore only certain quads can be driven through an external clock.
+As such we chose Quad 120 and Quad 122 as the quads for testing.
+
+There are also limitations to the number of quads that can be driven with an
 external clock while still meeting jitter requirments, but as we are only
 driving two transmitters, it was not an issue.
-As such we chose Quad 120 and Quad 122 as the quads for testing.
+
+
 
 \subsubsection{Pin Configuration}%
 \label{ssub:pin_configuration}
+It was also necessary to map the pins from the pins on the board to those on
+the FMC-MSMP module. This was done as in Table~\ref{tab:pinout}.
+As two transceivers were used, we mapped out the pins for clocks, transmitters,
+and recievers of both.
+
 For a full pinout diagram, it is necessary to refer to the user guide of the
-board \cite{vcu118_guide}. However the pin choices made are outlined in the
-following table.
+board \cite{vcu118_guide}. 
+
+\begin{table}[ht]
+    \centering
+    \hspace*{-3.5cm}\begin{tabular}{|c|c|c|c|c|c|}
+        \hline
+        Function & Channel & Net Name & FPGA PIN & Connected Pin & FMC+ Pin \\
+        \hline
+        clk\_p & GTYE4\_COMMON\_X0Y1  & FMCP\_HSPC\_GBTCLK5\_M2C\_P & AN40 & Z20 & J106 \\
+        clk\_n & GTYE4\_COMMON\_X0Y1  & FMCP\_HSPC\_GBTCLK5\_M2C\_N & AN41 & Z21 & J115 \\
+        tx\_p  & GTYE4\_CHANNEL\_X0Y4 & FMCP\_HSPC\_DP20\_C2M\_P    & BD42 & Z8  & J117 \\
+        tx\_n  & GTYE4\_CHANNEL\_X0Y4 & FMCP\_HSPC\_DP20\_C2M\_N    & BD43 & Z9  & J116 \\
+        rx\_p  & GTYE4\_CHANNEL\_X0Y4 & FMCP\_HSPC\_DP20\_M2C\_P    & BC45 & M14 & J55  \\
+        rx\_n  & GTYE4\_CHANNEL\_X0Y4 & FMCP\_HSPC\_DP20\_M2C\_N    & BC46 & M15 & J54  \\
+        \hline
+        clk\_p & GTYE4\_COMMON\_X0Y3  & GBTCLK2\_M2C\_P             & AF38 & L12 & J21  \\
+        clk\_n & GTYE4\_COMMON\_X0Y3  & GBTCLK2\_M2C\_N             & AF39 & L13 & J20  \\
+        tx\_p  & GTYE4\_CHANNEL\_X0Y8 & DP0\_C2M\_P                 & AT42 & C2  & J77  \\
+        tx\_n  & GTYE4\_CHANNEL\_X0Y8 & DP0\_C2M\_N                 & AT43 & C3  & J78  \\
+        rx\_p  & GTYE4\_CHANNEL\_X0Y8 & DP0\_M2C\_P                 & AR45 & C6  & J100 \\
+        rx\_n  & GTYE4\_CHANNEL\_X0Y8 & DP0\_M2C\_N                 & AR46 & C7  & J99  \\
+        \hline
+    \end{tabular}
+    \caption{Transceiver Pin Out}
+    \label{tab:pinout}
+\end{table}
 
 
 \subsubsection{Transceiver Configuration}%
 \label{ssub:transceiver_configuration}
 The transceivers were programmed to run at a standard rate of 10GB/s, with a
-reference clock of 156.25 MHz. The free-running clock (used to drive resets)
-was driven at 125 MHz, sourced from the onboard 300 MHz system clock. 
-The reset functions were bound to the physical push buttons BE23 and BB24. 
-Status indicators (Link Up and Link Down) were bound to LED1 and LED0
-respectively. 
+reference clock taken from the external Si5345 clock which was configured to
+run at 156.25 MHz with a format of 2.5 V LVDS.
+The free-running clock (used to drive resets) was driven at 125 MHz, sourced
+from the onboard 300 MHz system clock.  The reset functions were bound to the
+physical push buttons BE23 and BB24.  Status indicators (Link Up and Link Down)
+were bound to LED1 and LED0 respectively. 
 
 At the current stage there was no encoding in the setup as we were trying to
 troubleshoot an issue with the PRBS checking module. However if running the
@@ -108,8 +141,8 @@ Appendix~\ref{cha:transceiver_settings}.
 \subsection{Transmitter}%
 \label{sub:transmitter}
 In Figure~\ref{fig:transmitter_block} we see a block diagram of the transmitter
-(TX) of the transceiver. Parallel data flows into the transmitter interface,
-and is seriallised, then finally flows out of the transmitter as high-speed
+(TX) of the transceiver. Parallel data flows into the TX interface,
+and is serialised, then finally flows out of the transmitter as high-speed
 serial data.
 
 \begin{figure}[ht]
@@ -131,11 +164,15 @@ developed.
 \subsubsection{Burst Mode over Single Channel}%
 \label{ssub:burst_mode_over_single_channel}
 Here we modified the PRBS generation module and set it to output zeros if the
-enable command was not asserted.  In combination we added a 2 bit register
+enable command was not asserted.  In combination we added a register
 inside the wrapper, which on overflow toggles the enable flag. This has the
-effect of causing the PRBS module to output a sequence interspersed with zeros,
-as shown in Figure~\ref{fig:burst_mode_start}. We note also that the full sequence
-is transmitted in burst mode (no data is lost).
+effect of causing the PRBS module to output a sequence interspersed with zeros.
+
+A testbench where both the unmodified PRBS generator and burst PRBS generator
+are compared is shown in in Figure~\ref{fig:burst_mode_start}.  We see the
+burst generator correctly generating the expected PRBS sequence interspersed
+with zeros. We note also that the full sequence is transmitted in burst mode (no
+data is lost).
 
 \begin{figure}[ht]
     \centering
@@ -145,11 +182,11 @@ is transmitted in burst mode (no data is lost).
 \end{figure}
 
 Comparing Figure~\ref{fig:normal_mode_recur} and
-Figure~\ref{fig:burst_mode_recur} we see that the recurrence time (in this simulation we use PRBS7, as
-it is a short sequence) for the normal sequence as compared with the burst mode
-sequence is about half. This makes sense as the burst mode sequence is
-operating on a duty cycle of 50\% and hence should take roughly double the time
-to recur.
+Figure~\ref{fig:burst_mode_recur} we see that the recurrence time (in this
+testbench we use PRBS7, as it is a short sequence) for the normal sequence as
+compared with the burst mode sequence is about half. This makes sense as the
+burst mode sequence is operating on a duty cycle of 50\% and hence should take
+roughly double the time to recur.
 
 \begin{figure}[ht]
     \centering
@@ -177,10 +214,17 @@ sequence be sent over two different channels.
 
 
 \subsection{Reception}%
-\label{sub:prbs_checking}
-In normal operation the transceiver would parallise the serial data, and then
-pass the data to the PRBS checking module.  
-\TODO{image of transceiver -> prbs module}
+\label{sub:reception}
+In Figure~\ref{fig:receiver_block} we see a block diagram of the receiver
+(RX) of the transceiver. Serial data flows into the reciever, is deserialised,
+and is finally passed to the RX Interface where it can then be passed to the
+rest of the board.
+\begin{figure}[ht]
+    \centering
+    \hspace*{-1cm}\includegraphics[width=1.2\linewidth]{img/receiver_block.png}
+    \caption{Receiver Block Diagram \cite{GTY_guide}}%
+    \label{fig:receiver_block}
+\end{figure}
 
 \subsubsection{Burst Mode Checking}%
 \label{ssub:burst_mode_checking}
@@ -191,18 +235,48 @@ then this interferes with the module (as the next expected word will be calculat
 based on zeros). To compensate for this we added a register to the wrapper that
 would not pass zeros to the checker module. 
 In simulation when the PRBS generation module was connected directly to the
-PRBS checker this worked correctly, but when passed to through the transceiver,
-the checker module would throw errors.  We were not able to determine why.
+PRBS checker this worked correctly as shown in Figure~\ref{fig:burst_check_1}
+with no errors thrown (the sequence was repeated nearly 4,000 times). 
+\begin{figure}[ht]
+    \centering
+    \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_check.png}
+    \caption{Direct Connection Checking}%
+    \label{fig:burst_check_1}
+\end{figure}
+
+However, when passed through the transceiver, the PRBS checker found errors
+consistently, as shown in Figure~\ref{fig:burst_check_2}. 
+These errors appear to originate because in some situations where zeros are sent
+to the TX interface, we recieve some bits at the RX interface. 
+We suspect that this may be due to some encoding that the transceiver may be
+doing, but were unable to pinpoint the cause.
+
+\begin{figure}[ht]
+    \centering
+    \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_check_2.png}
+    \caption{Transceiver Checking}%
+    \label{fig:burst_check_2}
+\end{figure}
 
 \subsubsection{Two Channel Checking}%
 \label{ssub:two_channel_checking}
 In the case where two transmitters were muxed together and were sent to a
 single receiver, it should not have been necessary to change the behaviour of
 the PRBS checking module.
-However we were unable to check this as the lab was closed.
+We were unable to experiment due to the closing of the lab.
 
 \subsubsection{Disabling The CDR}%
 \label{ssub:disabling_the_cdr}
+The receiver CDR block detailed block diagram is shown in
+Figure~\ref{fig:cdr_detail}.
+
+\begin{figure}[ht]
+    \centering
+    \hspace*{-1cm}\includegraphics[width=1.2\linewidth]{img/cdr_detail}
+    \caption{CDR Block Diagram}%
+    \label{fig:cdr_detail}
+\end{figure}
+
 The final step would have been to run the reciever source synchronously. The
 transceiver did not allow much flexibilty here. We attemped to do this was by
 disabling the CDR and using the same clock to drive the reciever and

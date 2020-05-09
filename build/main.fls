@@ -426,6 +426,26 @@ INPUT .\img\burst_mode_3.png
 INPUT .\img\burst_mode_3.png
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0800.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecbx0800.tfm
+INPUT img\receiver_block.png
+INPUT .\img\receiver_block.png
+INPUT .\img\receiver_block.png
+INPUT .\img\receiver_block.png
+INPUT .\img\receiver_block.png
+INPUT img\burst_check.png
+INPUT .\img\burst_check.png
+INPUT .\img\burst_check.png
+INPUT .\img\burst_check.png
+INPUT .\img\burst_check.png
+INPUT img\burst_check_2.png
+INPUT .\img\burst_check_2.png
+INPUT .\img\burst_check_2.png
+INPUT .\img\burst_check_2.png
+INPUT .\img\burst_check_2.png
+INPUT img\cdr_detail.png
+INPUT .\img\cdr_detail.png
+INPUT .\img\cdr_detail.png
+INPUT .\img\cdr_detail.png
+INPUT .\img\cdr_detail.png
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\chp\conclusion.aux
 INPUT chp\conclusion.tex
 INPUT chp\conclusion.tex
@@ -442,6 +462,11 @@ INPUT .\img\transceiver2.png
 INPUT .\img\transceiver2.png
 INPUT .\img\transceiver2.png
 INPUT .\img\transceiver2.png
+INPUT img\clock_settings.png
+INPUT .\img\clock_settings.png
+INPUT .\img\clock_settings.png
+INPUT .\img\clock_settings.png
+INPUT .\img\clock_settings.png
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
 INPUT build\_minted-main\default-pyg-prefix.pygstyle
 INPUT build\_minted-main\default-pyg-prefix.pygstyle
