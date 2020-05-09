@@ -22,11 +22,11 @@
 \contentsline {subsubsection}{Burst Mode over Single Channel}{10}{section*.23}%
 \contentsline {subsubsection}{Switching Between Two Channels}{11}{section*.27}%
 \contentsline {subsection}{\numberline {4.1.4}Reception}{11}{subsection.4.1.4}%
-\contentsline {subsubsection}{Burst Mode Checking}{11}{section*.30}%
-\contentsline {subsubsection}{Two Channel Checking}{12}{section*.33}%
+\contentsline {subsubsection}{Burst Mode Checking}{12}{section*.30}%
+\contentsline {subsubsection}{Two Channel Checking}{13}{section*.33}%
 \contentsline {subsubsection}{Disabling The CDR}{13}{section*.34}%
-\contentsline {section}{\numberline {4.2}Optical Transmission}{13}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}SOA Board}{13}{subsection.4.2.1}%
+\contentsline {section}{\numberline {4.2}Optical Transmission}{14}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}SOA Board}{14}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Heatsink and Mount}{14}{subsection.4.2.2}%
 \contentsline {chapter}{\numberline {5}Conclusion}{15}{chapter.5}%
 \contentsline {chapter}{Bibliography}{16}{chapter*.36}%

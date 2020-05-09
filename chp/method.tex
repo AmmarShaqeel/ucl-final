@@ -91,8 +91,8 @@ the FMC-MSMP module. This was done as in Table~\ref{tab:pinout}.
 As two transceivers were used, we mapped out the pins for clocks, transmitters,
 and recievers of both.
 
-For a full pinout diagram, it is necessary to refer to the user guide of the
-board \cite{vcu118_guide}. 
+\noindent For a full pinout diagram refer to the user guide of the board
+\cite{vcu118_guide}. 
 
 \begin{table}[ht]
     \centering
@@ -205,13 +205,17 @@ roughly double the time to recur.
 \subsubsection{Switching Between Two Channels}%
 \label{ssub:switching_between_two_channels}
 Here the PRBS wrapper was changed to feed the two different outputs. The PRBS
-generator module was unchanged. Using a 2 bit register which on oveflow
-alternated between which of the outputs the PRBS data was sent to, with the
-other output being sent zeros. This had the overall effect of having the whole
-sequence be sent over two different channels.
+generator was unchanged. We added a register which on overflow alternated the
+output of the generator module. 
+This had the overall effect of having the whole sequence be sent over two
+different channels as shown in Figure~\ref{fig:two_channel_tx}.
 
-\TODO{two channel switch (showing module with two outputs)}
-
+\begin{figure}[ht]
+    \centering
+    \hspace*{-3cm}\includegraphics[width=1.4\linewidth]{img/two_channel.png}
+    \caption{Two Channel Burst Mode}%
+    \label{fig:two_channel_tx}
+\end{figure}
 
 \subsection{Reception}%
 \label{sub:reception}
@@ -263,7 +267,7 @@ doing, but were unable to pinpoint the cause.
 In the case where two transmitters were muxed together and were sent to a
 single receiver, it should not have been necessary to change the behaviour of
 the PRBS checking module.
-We were unable to experiment due to the closing of the lab.
+We were unable to experiment with this due to the closing of the lab.
 
 \subsubsection{Disabling The CDR}%
 \label{ssub:disabling_the_cdr}
@@ -277,13 +281,26 @@ Figure~\ref{fig:cdr_detail}.
     \label{fig:cdr_detail}
 \end{figure}
 
-The final step would have been to run the reciever source synchronously. The
+The final step would have been to run the receiver source-synchronously.  The
 transceiver did not allow much flexibilty here. We attemped to do this was by
 disabling the CDR and using the same clock to drive the reciever and
-transmitter. However the link here was not stable, and we were unable to get
-phase readouts that may have allowed us to modify the phase of the incoming
-clock. Overall this was unsuccessful.
+transmitter, ideally then we take readings of phase, and then make the
+necessary compensations.
+ 
+We were able to disable the CDR by asserting the CDRHOLD ports. This was done
+by hardcoding the CDRHOLD value. We further extended this by adding CDRHOLD
+in conjuction with the QPLLLOCK and RXCDRLOCK ports to the Xilinx Virtual
+Input/Output (VIO) which allowed us to toggle the CDR.
 
+The link became unstable after the port was asserted.  
+
+We were then unable to read the phase. The phase caching paper by Kari, et al.
+\cite{kari_phase} was done on Xilinx Ultra-scale board and they were able to
+read and modify the phase by reading/writing values to the appropriate register.
+However the details of that implementation were specific to the Ultra-scale
+boards. The board used in the project is an Ultra-scale+ board and there is no
+publicly available information on how to modify/read the phase. 
+As such we were unable to explore this further.
 
 \section{Optical Transmission}%
 \label{optical_transmission}
