@@ -12,10 +12,16 @@
 \BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Hardware}{section.4.1}% 12
 \BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Transceiver Setup}{section.4.1}% 13
 \BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Transmitter}{section.4.1}% 14
-\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 Reception}{section.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.1.4}{4.1.4 Receiver}{section.4.1}% 15
 \BOOKMARK [1][-]{section.4.2}{4.2 Optical Transmission}{chapter.4}% 16
 \BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 SOA Board}{section.4.2}% 17
 \BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Heatsink and Mount}{section.4.2}% 18
 \BOOKMARK [0][]{chapter.5}{5 Conclusion}{}% 19
-\BOOKMARK [0][]{chapter*.36}{Bibliography}{}% 20
+\BOOKMARK [0][]{chapter*.38}{Bibliography}{}% 20
 \BOOKMARK [0][]{appendix.U}{A Transceiver Settings}{}% 21
+\BOOKMARK [0][]{appendix.V}{B Verilog Code}{}% 22
+\BOOKMARK [1][-]{section.V.1}{B.1 Single Channel Burst Mode}{appendix.V}% 23
+\BOOKMARK [1][-]{section.V.2}{B.2 Two Channel Burst Mode}{appendix.V}% 24
+\BOOKMARK [1][-]{section.V.3}{B.3 Burst Mode Checking}{appendix.V}% 25
+\BOOKMARK [0][]{appendix.W}{C SOA PCB Design}{}% 26
+\BOOKMARK [0][]{appendix.X}{D Substrate Design}{}% 27

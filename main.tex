@@ -1,5 +1,6 @@
 \documentclass[oneside]{discothesis}
 \usepackage[outputdir=build]{minted}
+\usepackage{pdfpages} 
 \setminted[python]{frame=lines, fontsize=\footnotesize, linenos}    
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,9 +94,6 @@ volutpat purus. Duis id rhoncus felis.
 \appendix
 \chapter{Transceiver Settings}%
 \label{cha:transceiver_settings}
-
-
-
 The configuration of the Transceiver Wizard can be found here.
 
 \begin{figure}[ht]
@@ -186,6 +184,320 @@ C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub] connect_debug_port dbg_hub/clk
 \label{lst:constraints}
 \end{listing}
 
+\chapter{Verilog Code}%
+\label{cha:verilog_code}
+Here we include the different wrappers for the PRBS burst mode/checking. 
+Most of the code is provided by the Xilinx wizard~\cite{wizard_guide}. The
+modifications are the sections titled "Burst Mode Logic".
+
+\section{Single Channel Burst Mode}%
+\label{sec:single_channel_burst_mode}
+\begin{minted}[linenos,numbersep=5pt,frame=lines,framesep=2mm]{verilog}
+
+module gtwizard_ultrascale_1_example_stimulus_raw (
+  input  wire         gtwiz_reset_all_in,
+  input  wire         gtwiz_userclk_tx_usrclk2_in,
+  input  wire         gtwiz_userclk_tx_active_in,
+  // input  wire         enable,
+  output wire [31:0] txdata_out
+);
 
 
+  // ------------------------------------------------------------------------
+  // Reset synchronizer
+  // ------------------------------------------------------------------------
+
+  // Synchronize the example stimulus reset condition into the txusrclk2 domain
+  wire example_stimulus_reset_int = gtwiz_reset_all_in || ~gtwiz_userclk_tx_active_in;
+  wire example_stimulus_reset_sync;
+
+  (* DONT_TOUCH = "TRUE" *)
+  gtwizard_ultrascale_1_example_reset_synchronizer
+  example_stimulus_reset_synchronizer_inst (
+    .clk_in  (gtwiz_userclk_tx_usrclk2_in),
+    .rst_in  (example_stimulus_reset_int),
+    .rst_out (example_stimulus_reset_sync)
+  );
+
+
+  // -----------------------------------------------------------------------
+  // PRBS generator output enable and sideband control generation
+  // ----------------------------------------------------------------------
+
+  reg prbs_any_gen_en_int = 1'b1;
+
+  // ------------------------------------------------------------------
+  // Burst Mode Logic
+  // ------------------------------------------------------------------
+
+  reg [1:0] prbs_ctr = 2'd0;
+
+  always @(posedge gtwiz_userclk_tx_usrclk2_in) begin
+    if (example_stimulus_reset_sync) begin
+      prbs_ctr <= 2'd0;
+      prbs_any_gen_en_int  <= 1'b0;
+    end
+
+    else begin
+         if(prbs_ctr >= 2'd3)begin
+                    prbs_ctr <= 0;
+                    prbs_any_gen_en_int  <= ~prbs_any_gen_en_int;
+             end
+             else begin
+                    prbs_ctr <= prbs_ctr + 2'd1;
+             end
+       end
+     end
+
+  // ---------------------------------------------------------------------
+  // PRBS generator block
+  // --------------------------------------------------------------------
+  // The prbs_any block, described in Xilinx Application Note 884 (XAPP884), "An
+  // Attribute-Programmable PRBS Generator and Checker", generates or checks a
+  // parameterizable PRBS sequence. Instantiate and parameterize a prbs_any block
+  // to generate a PRBS31 sequence with parallel data sized to the transmitter
+  // user data width.
+
+  gtwizard_ultrascale_1_prbs_any # (
+    .CHK_MODE    (0),
+    .INV_PATTERN (0),
+    .POLY_LENGHT (7),
+    .POLY_TAP    (6),
+    .NBITS       (32)
+  ) prbs_any_gen_inst (
+    .RST      (example_stimulus_reset_sync),
+    .CLK      (gtwiz_userclk_tx_usrclk2_in),
+    .DATA_IN  (32'b0),
+    .EN       (prbs_any_gen_en_int),
+    .DATA_OUT (txdata_out)
+  );
+
+
+endmodule
+\end{minted}
+\cleardoublepage
+
+\section{Two Channel Burst Mode}%
+\label{sec:two_channel_burst_mode}
+\begin{minted}[linenos,numbersep=5pt,frame=lines,framesep=2mm]{verilog}
+module example_stimulus_two_channel (
+  input  wire         gtwiz_reset_all_in,
+  input  wire         gtwiz_userclk_tx_usrclk2_in,
+  input  wire         gtwiz_userclk_tx_active_in,
+  // input  wire         enable,
+  output wire [31:0] txdata1_out,
+  output wire [31:0] txdata2_out
+);
+
+
+  // -----------------------------------------------------------------
+  // Reset synchronizer
+  // -----------------------------------------------------------------
+
+  // Synchronize the example stimulus reset condition into the txusrclk2 domain
+  wire example_stimulus_reset_int = gtwiz_reset_all_in || ~gtwiz_userclk_tx_active_in;
+  wire example_stimulus_reset_sync;
+
+  (* DONT_TOUCH = "TRUE" *)
+  gtwizard_ultrascale_1_example_reset_synchronizer
+  example_stimulus_reset_synchronizer_inst (
+    .clk_in  (gtwiz_userclk_tx_usrclk2_in),
+    .rst_in  (example_stimulus_reset_int),
+    .rst_out (example_stimulus_reset_sync)
+  );
+
+
+  // ------------------------------------------------------------------
+  // PRBS generator output enable and sideband control generation
+  // ------------------------------------------------------------------
+
+  // For raw mode data transmission, the PRBS generator is always enabled
+  reg prbs_any_gen_en_int = 1'b1;
+  
+  // ------------------------------------------------------------------
+  // Burst Mode Logic
+  // ------------------------------------------------------------------
+
+  reg [1:0] prbs_ctr = 2'd0;
+  reg select = 1'b0;
+  reg [31:0] txdata1;
+  reg [31:0] txdata2;
+  wire [31:0] txdata_out;
+
+
+  always @(posedge gtwiz_userclk_tx_usrclk2_in) begin
+    if (example_stimulus_reset_sync) begin
+      prbs_ctr <= 2'd0;
+      txdata1  <= 31'b0;
+      txdata2  <= 31'b0;
+    end
+
+    else begin
+         if(prbs_ctr >= 2'd3)begin
+                    prbs_ctr <= 0;
+                    select  <= ~select;
+             end
+             else begin
+                    prbs_ctr <= prbs_ctr + 2'd1;
+             end
+       end
+     end
+     
+     always@(*) begin
+        if (select == 1'b1) begin
+            txdata1 = txdata_out;
+            txdata2 = 31'b0;
+        end else begin
+            txdata1 = 31'b0;
+            txdata2 = txdata_out;
+        end
+    end
+    
+    assign txdata1_out = txdata1;
+    assign txdata2_out = txdata2;
+
+
+
+  // ------------------------------------------------------------------------
+  // PRBS generator block 
+  // ------------------------------------------------------------------------
+
+  // The prbs_any block, described in Xilinx Application Note 884 (XAPP884), "An
+  // Attribute-Programmable PRBS Generator and Checker", generates or checks a
+  // parameterizable PRBS sequence. Instantiate and parameterize a prbs_any block
+  // to generate a PRBS31 sequence with parallel data sized to the transmitter
+  // user data width.
+
+  gtwizard_ultrascale_1_prbs_any # (
+    .CHK_MODE    (0),
+    .INV_PATTERN (0),
+    .POLY_LENGHT (7),
+    .POLY_TAP    (6),
+    .NBITS       (32)
+  ) prbs_any_gen_inst (
+    .RST      (example_stimulus_reset_sync),
+    .CLK      (gtwiz_userclk_tx_usrclk2_in),
+    .DATA_IN  (32'b0),
+    .EN       (prbs_any_gen_en_int),
+    .DATA_OUT (txdata_out)
+  );
+endmodule
+\end{minted}
+
+\cleardoublepage
+
+\section{Burst Mode Checking}%
+\label{sec:burst_mode_checking}
+\begin{minted}[linenos,numbersep=5pt,frame=lines,framesep=2mm]{verilog}
+module gtwizard_ultrascale_1_example_checking_raw (
+  input  wire         gtwiz_reset_all_in,
+  input  wire         gtwiz_userclk_rx_usrclk2_in,
+  input  wire         gtwiz_userclk_rx_active_in,
+  input  wire [31:0] rxdata_in,
+  output reg          prbs_match_out = 1'b0
+);
+
+
+  // --------------------------------------------------------------------------
+  // Reset synchronizer
+  // --------------------------------------------------------------------------
+
+  // Synchronize the example stimulus reset condition into the rxusrclk2 domain
+  wire example_checking_reset_int = gtwiz_reset_all_in || ~gtwiz_userclk_rx_active_in;
+  wire example_checking_reset_sync;
+
+  (* DONT_TOUCH = "TRUE" *)
+  gtwizard_ultrascale_1_example_reset_synchronizer
+  example_checking_reset_synchronizer_inst (
+    .clk_in  (gtwiz_userclk_rx_usrclk2_in),
+    .rst_in  (example_checking_reset_int),
+    .rst_out (example_checking_reset_sync)
+  );
+
+  // -------------------------------------------------------------------------
+  // PRBS checker enable and sideband control generation
+  // -------------------------------------------------------------------------
+
+  // For raw mode data reception, the PRBS checker is always enabled
+  reg prbs_any_chk_en_int = 1'b1;
+
+  // ------------------------------------------------------------------
+  // Burst Mode Logic
+  // ------------------------------------------------------------------
+
+  reg [31:0] last_prbs = 32'b0;
+  reg [31:0] checked_prbs = 32'b0;
+
+  // AND gate to check if incoming data is all zeros
+  always @(posedge gtwiz_userclk_rx_usrclk2_in) begin
+      if (example_checking_reset_sync) begin
+          last_prbs <= 1'b0;
+          prbs_any_chk_en_int <= 1'b0;
+      end
+      // loads incoming data to register
+      else begin
+          last_prbs <= rxdata_in;
+      end
+
+      // checks if registered data is 0 
+      if (~(|last_prbs) | (last_prbs == 32'b1)) begin
+          prbs_any_chk_en_int <= 1'b0;
+      end
+      else begin
+          prbs_any_chk_en_int <= 1'b1;
+          checked_prbs <= last_prbs;
+      end
+  end
+
+
+  // -----------------------------------------------------------------------
+  // PRBS checker block
+  // -----------------------------------------------------------------------
+
+  // The prbs_any block, described in xilinx application note 884 (xapp884), "an
+  // attribute-programmable prbs generator and checker", generates or checks a
+  // parameterizable prbs sequence. instantiate and parameterize a prbs_any block
+  // to check a prbs31 sequence with parallel data sized to the receiver user data
+  // width.
+
+  wire [31:0] prbs_any_chk_error_int;
+
+
+  gtwizard_ultrascale_1_prbs_any # (
+    .CHK_MODE    (1),
+    .INV_PATTERN (0),
+    .POLY_LENGHT (7),
+    .POLY_TAP    (6),
+    .NBITS       (32)
+  ) prbs_any_chk_inst (
+    .RST      (example_checking_reset_sync),
+    .CLK      (gtwiz_userclk_rx_usrclk2_in),
+    .DATA_IN  (checked_prbs),
+    .EN       (prbs_any_chk_en_int),
+    .DATA_OUT (prbs_any_chk_error_int)
+  );
+
+
+
+
+
+  // the prbs_any block indicates a match of the parallel prbs data when all
+  // data_out bits are 0. register the result of the nor function as the prbs
+  // match indicator.
+  always @(posedge gtwiz_userclk_rx_usrclk2_in) begin
+    if (example_checking_reset_sync)
+      prbs_match_out <= 1'b0;
+    else
+      prbs_match_out <= ~(|prbs_any_chk_error_int);
+  end
+endmodule
+\end{minted}
+
+
+
+
+\cleardoublepage
+\includepdf[pages=1,pagecommand=\chapter{SOA PCB Design}\label{cha:soa_pcb}]{soa.pdf}
+\includepdf[pages=1,pagecommand=\chapter{Substrate Design}\label{cha:substrate}]{substrate.pdf}
+\includepdf[page=-]{declaration.pdf}
 \end{document}

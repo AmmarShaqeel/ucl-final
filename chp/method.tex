@@ -16,14 +16,11 @@ loopback configuration as shown in Figure~\ref{fig:loopback}.
 \section{Transmission and Reception}%
 \label{sec:transmission_and_reception}
 
-
-
-
 \subsection{Hardware}%
 \label{sub:hardware}
 To generate and receive PRBS data the VCU118 board was used. The transmission
 and reception of the data was handled by the onboard high-speed parallel to
-serial GTY transceivers in conjuction with a Si5345 external clock. To connect
+serial GTY transceivers in conjunction with a Si5345 external clock. To connect
 with the transceiver the HiTechGLobal FMC-MSMP module was used.
 \begin{figure}[ht]
     \centering
@@ -79,7 +76,7 @@ Furthermore only certain quads can be driven through an external clock.
 As such we chose Quad 120 and Quad 122 as the quads for testing.
 
 There are also limitations to the number of quads that can be driven with an
-external clock while still meeting jitter requirments, but as we are only
+external clock while still meeting jitter requirements, but as we are only
 driving two transmitters, it was not an issue.
 
 
@@ -155,11 +152,9 @@ serial data.
 We looked to modify the functionality of a basic implementation of the
 transmitter. In the basic implementation a PRBS generator that generates a
 sequence through shift registers (as outlined in
-Section~\ref{ssub:prbs_generation}) is is fed to the transmitter interface. 
+Section~\ref{ssub:prbs_generation}) is fed to the transmitter interface. 
 
-The PRBS module was mainly unchanged from the default with some minor
-adjustments.  There were two variations of the PRBS generation module that were
-developed.
+There were two variations of the PRBS generation module that were developed.
 
 \subsubsection{Burst Mode over Single Channel}%
 \label{ssub:burst_mode_over_single_channel}
@@ -167,6 +162,7 @@ Here we modified the PRBS generation module and set it to output zeros if the
 enable command was not asserted.  In combination we added a register
 inside the wrapper, which on overflow toggles the enable flag. This has the
 effect of causing the PRBS module to output a sequence interspersed with zeros.
+The code can be found in Section~\ref{sec:single_channel_burst_mode}.
 
 A testbench where both the unmodified PRBS generator and burst PRBS generator
 are compared is shown in in Figure~\ref{fig:burst_mode_start}.  We see the
@@ -183,10 +179,10 @@ data is lost).
 
 Comparing Figure~\ref{fig:normal_mode_recur} and
 Figure~\ref{fig:burst_mode_recur} we see that the recurrence time (in this
-testbench we use PRBS7, as it is a short sequence) for the normal sequence as
-compared with the burst mode sequence is about half. This makes sense as the
-burst mode sequence is operating on a duty cycle of 50\% and hence should take
-roughly double the time to recur.
+testbench we use PRBS7, as it is a short sequence) for the normal sequence is
+about half of the burst mode sequence. This is expected as the burst mode
+sequence is operating on a duty cycle of 50\% and hence should take double the
+time to recur.
 
 \begin{figure}[ht]
     \centering
@@ -206,9 +202,10 @@ roughly double the time to recur.
 \label{ssub:switching_between_two_channels}
 Here the PRBS wrapper was changed to feed the two different outputs. The PRBS
 generator was unchanged. We added a register which on overflow alternated the
-output of the generator module. 
+output of the generator module. The code can be found in Section~\ref{sec:two_channel_burst_mode} 
 This had the overall effect of having the whole sequence be sent over two
 different channels as shown in Figure~\ref{fig:two_channel_tx}.
+
 
 \begin{figure}[ht]
     \centering
@@ -217,12 +214,14 @@ different channels as shown in Figure~\ref{fig:two_channel_tx}.
     \label{fig:two_channel_tx}
 \end{figure}
 
-\subsection{Reception}%
-\label{sub:reception}
+\cleardoublepage
+
+\subsection{Receiver}%
+\label{sub:receiver}
 In Figure~\ref{fig:receiver_block} we see a block diagram of the receiver
 (RX) of the transceiver. Serial data flows into the reciever, is deserialised,
 and is finally passed to the RX Interface where it can then be passed to the
-rest of the board.
+rest of the board. 
 \begin{figure}[ht]
     \centering
     \hspace*{-1cm}\includegraphics[width=1.2\linewidth]{img/receiver_block.png}
@@ -232,15 +231,17 @@ rest of the board.
 
 \subsubsection{Burst Mode Checking}%
 \label{ssub:burst_mode_checking}
-For burst mode checking there are some issues as there are periods when the
-incoming bitstream is all zeros. The PRBS checker module takes the incoming
-data as a seed to calculate the next expected sequence. If zeros are provided
-then this interferes with the module (as the next expected word will be calculated
-based on zeros). To compensate for this we added a register to the wrapper that
-would not pass zeros to the checker module. 
+In burst mode checking there are periods when the incoming bitstream is all
+zeros. The PRBS checker module takes the incoming data as a seed to calculate
+the next expected sequence. If zeros are provided then this interferes with the
+module (as the next expected word will be calculated based on zeros). To
+compensate for this we loaded incoming data to a register and checked if it was
+zeros. If not, it was passed to the PRBS module.
+The code can be found in Section~\ref{sec:burst_mode_checking}.  
+
 In simulation when the PRBS generation module was connected directly to the
 PRBS checker this worked correctly as shown in Figure~\ref{fig:burst_check_1}
-with no errors thrown (the sequence was repeated nearly 4,000 times). 
+with no errors (the sequence was repeated nearly 4,000 times). 
 \begin{figure}[ht]
     \centering
     \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_check.png}
@@ -249,11 +250,11 @@ with no errors thrown (the sequence was repeated nearly 4,000 times).
 \end{figure}
 
 However, when passed through the transceiver, the PRBS checker found errors
-consistently, as shown in Figure~\ref{fig:burst_check_2}. 
-These errors appear to originate because in some situations where zeros are sent
-to the TX interface, we recieve some bits at the RX interface. 
-We suspect that this may be due to some encoding that the transceiver may be
-doing, but were unable to pinpoint the cause.
+consistently, as shown in Figure~\ref{fig:burst_check_2}.  These errors appear
+to originate in situations where zeros are sent to the TX interface, but some
+bits are received at the RX interface.  We suspect that this may be due to some
+encoding by the transceiver, but were unable to pinpoint the cause before the
+end of the project.
 
 \begin{figure}[ht]
     \centering
@@ -272,7 +273,11 @@ We were unable to experiment with this due to the closing of the lab.
 \subsubsection{Disabling The CDR}%
 \label{ssub:disabling_the_cdr}
 The receiver CDR block detailed block diagram is shown in
-Figure~\ref{fig:cdr_detail}.
+Figure~\ref{fig:cdr_detail}. We see it operates as a control system similar to
+what is described in Section~\ref{ssub:clock_and_data_recovery}, where the
+incoming data is sampled by edge and data samplers to get phase information,
+which is then passed to a state machine which makes decisions on how to adjust
+the phase of the local clock (provided by the PLL) using phase interpolators.
 
 \begin{figure}[ht]
     \centering
@@ -281,15 +286,15 @@ Figure~\ref{fig:cdr_detail}.
     \label{fig:cdr_detail}
 \end{figure}
 
-The final step would have been to run the receiver source-synchronously.  The
-transceiver did not allow much flexibilty here. We attemped to do this was by
-disabling the CDR and using the same clock to drive the reciever and
+The final of the project would have been to run the receiver source-synchronously.  The
+transceiver did not allow much flexibility here. We attempted to do this was by
+disabling the CDR and using the same clock to drive the receiver and
 transmitter, ideally then we take readings of phase, and then make the
 necessary compensations.
  
 We were able to disable the CDR by asserting the CDRHOLD ports. This was done
 by hardcoding the CDRHOLD value. We further extended this by adding CDRHOLD
-in conjuction with the QPLLLOCK and RXCDRLOCK ports to the Xilinx Virtual
+in conjunction with the QPLLLOCK and RXCDRLOCK ports to the Xilinx Virtual
 Input/Output (VIO) which allowed us to toggle the CDR.
 
 The link became unstable after the port was asserted.  
@@ -304,22 +309,39 @@ As such we were unable to explore this further.
 
 \section{Optical Transmission}%
 \label{optical_transmission}
-This part of the project was not completed as the labs were closed before we
-were able to test it. However some hardware was prepared, and is described in
-the following sections.
+This part of the project was not completed as the labs were closed. However
+some hardware was prepared, and is described in the following sections.
 
 \subsection{SOA Board}%
 \label{sub:soa_board}
-4 PCBs were prepared. The design consisted of an Inphenix SOA mounted in the
-center. The electrical component was provided a matched RF line, and the laser
-was coupled into the sides. A d-type connecter was also provided so that the
-SOA could be temperature controlled.
+The design consisted of an Inphenix IPSAD1502 using input from a 
+matched RF line to modulate an incoming laser. The SOA was also temperature
+controlled at around 20 degrees Celsius.  The circuit diagram can be seen in
+Figure~\ref{fig:soa_circuit} (developed by Dennis Goh).
 
+We prepared 4 PCBs. The PCB design can be found in Appendix~\ref{cha:soa_pcb}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.1\linewidth]{img/soa_circuit.png}
+    \caption{SOA circuit}%
+    \label{fig:soa_circuit}
+\end{figure}
 
 \subsection{Heatsink and Mount}%
 \label{sub:heatsink_and_mount}
 It was also necessary to attach a aluminium substrate underneath the PCB board
-for heat dissipation. 
+for heat dissipation. An Aluminium substrate was machined to match (as shown in
+Appendix~\ref{cha:substrate}), then the SOA was placed in contact with the
+substrate.  We then stacked the four boards above each other as in
+Figure~\ref{fig:full_mount}.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\linewidth]{img/full_mount.jpeg}
+    \caption{Stacked Boards}%
+    \label{fig:full_mount}
+\end{figure}
 
 
 

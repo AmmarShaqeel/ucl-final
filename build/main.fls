@@ -267,6 +267,12 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def
 INPUT main.aex
 INPUT main.aex
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.aux
@@ -299,6 +305,10 @@ INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.out
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.out
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.out
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.out
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdflscape\pdflscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\pdflscape\pdflscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty
 INPUT img\ucl_banner.eps
 INPUT .\img\ucl_banner.eps
 INPUT .\img\ucl_banner.eps
@@ -334,6 +344,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecsl1000.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\eccc1000.tfm
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\chp\intro.aux
 INPUT chp\intro.tex
 INPUT chp\intro.tex
@@ -369,8 +381,6 @@ INPUT .\img\soa.png
 INPUT .\img\soa.png
 INPUT .\img\soa.png
 INPUT .\img\soa.png
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecsl1000.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\eccc1000.tfm
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\chp\objectives.aux
 INPUT chp\objectives.tex
 INPUT chp\objectives.tex
@@ -449,6 +459,16 @@ INPUT .\img\cdr_detail.png
 INPUT .\img\cdr_detail.png
 INPUT .\img\cdr_detail.png
 INPUT .\img\cdr_detail.png
+INPUT img\soa_circuit.png
+INPUT .\img\soa_circuit.png
+INPUT .\img\soa_circuit.png
+INPUT .\img\soa_circuit.png
+INPUT .\img\soa_circuit.png
+INPUT img\full_mount.jpeg
+INPUT .\img\full_mount.jpeg
+INPUT .\img\full_mount.jpeg
+INPUT .\img\full_mount.jpeg
+INPUT .\img\full_mount.jpeg
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\chp\conclusion.aux
 INPUT chp\conclusion.tex
 INPUT chp\conclusion.tex
@@ -487,6 +507,96 @@ INPUT build\_minted-main\5EBADBF3DE5EB67294148DC798AE37B8518A88E331BBBC9A25B5A18
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ectt1000.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0500.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit1000.tfm
+OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
+INPUT .\build\main.pyg
+INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tctt1000.tfm
+OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
+INPUT .\build\main.pyg
+INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\E98D65BE340EF3599BB07CA90B697CC7FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\E98D65BE340EF3599BB07CA90B697CC7FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\E98D65BE340EF3599BB07CA90B697CC7FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\E98D65BE340EF3599BB07CA90B697CC7FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
+INPUT .\build\main.pyg
+INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\C4C7A236C5D2493E3F1C3BFC19D0B296FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\C4C7A236C5D2493E3F1C3BFC19D0B296FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\C4C7A236C5D2493E3F1C3BFC19D0B296FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\C4C7A236C5D2493E3F1C3BFC19D0B296FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT soa.pdf
+INPUT .\soa.pdf
+INPUT substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT substrate.pdf
+INPUT .\substrate.pdf
+INPUT declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
+INPUT declaration.pdf
+INPUT .\declaration.pdf
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.aux
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\chp\intro.aux
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\chp\intro.aux
@@ -501,8 +611,8 @@ INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\chp\conclusion.aux
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.out
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\main.out
 INPUT build\\main.pyg
-INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\cm-super\cm-super-t1.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\cm-super\cm-super-ts1.enc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\enc\dvips\cm-super\cm-super-t1.enc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi7.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
