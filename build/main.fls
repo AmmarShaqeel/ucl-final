@@ -419,6 +419,11 @@ INPUT .\img\transmitter_block.png
 INPUT .\img\transmitter_block.png
 INPUT .\img\transmitter_block.png
 INPUT .\img\transmitter_block.png
+INPUT img\tx_interface.png
+INPUT .\img\tx_interface.png
+INPUT .\img\tx_interface.png
+INPUT .\img\tx_interface.png
+INPUT .\img\tx_interface.png
 INPUT img\burst_mode_1.png
 INPUT .\img\burst_mode_1.png
 INPUT .\img\burst_mode_1.png
@@ -444,6 +449,11 @@ INPUT .\img\receiver_block.png
 INPUT .\img\receiver_block.png
 INPUT .\img\receiver_block.png
 INPUT .\img\receiver_block.png
+INPUT img\rx_interface.png
+INPUT .\img\rx_interface.png
+INPUT .\img\rx_interface.png
+INPUT .\img\rx_interface.png
+INPUT .\img\rx_interface.png
 INPUT img\burst_check.png
 INPUT .\img\burst_check.png
 INPUT .\img\burst_check.png
@@ -509,13 +519,20 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecrm0500.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\ecit1000.tfm
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
 INPUT .\build\main.pyg
+INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\3ECD5EFDA3EFE58F76C930913B976D15FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\3ECD5EFDA3EFE58F76C930913B976D15FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\3ECD5EFDA3EFE58F76C930913B976D15FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT build\_minted-main\3ECD5EFDA3EFE58F76C930913B976D15FC5A2DDECD8B76E86018A6341367D0FA.pygtex
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tctt1000.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcit1000.tfm
+OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
+INPUT .\build\main.pyg
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
 INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
 INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
 INPUT build\_minted-main\6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A6341367D0FA.pygtex
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
-INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmtt.fd
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tctt1000.tfm
 OUTPUT C:\Users\ammar_laptop\Documents\thesis\build\main.pyg
 INPUT .\build\main.pyg
 INPUT C:\Users\ammar_laptop\Documents\thesis\.\build\_minted-main\E98D65BE340EF3599BB07CA90B697CC7FC5A2DDECD8B76E86018A6341367D0FA.pygtex

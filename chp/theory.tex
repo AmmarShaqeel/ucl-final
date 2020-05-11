@@ -112,7 +112,7 @@ synchronous with the clock domain of the receiving device.
 Optical amplifiers are devices that can amplify an optical signal without
 needing to convert it to an electrical one. 
 A silicon optical amplifier (SOA) is one that uses a semiconductor as the gain
-medium, as light passes through this gain medium it is amplified.
+medium. As light passes through this gain medium it is amplified.
 SOAs are electrically pumped (do not require the use of another laser) and are of
 small size.
 \begin{figure}[ht]
@@ -128,52 +128,86 @@ small size.
 \label{sec:literature_review}
 
 \noindent \cite{kari_phase} outlines how CDR circuits are a limiting factor in
-optical switching and proposes a method of phase caching to overcome this.
-The data is transferred over the high-speed Xilinx transceivers, and uses a
-bang-bang CDR. The phase measurments that are being compared are that of the
-recieved data to the local clock.
-The PRBS data is pregenerated (written to memory) and is sent in short bursts
-with a known sequence at the end. When the data arrives it is then written to
-memory and then processed.  The phase caching improved locking time on
-switching by 12 times.
+optical switching and proposes a method of phase caching to overcome this.  The
+data is transferred over the high-speed Xilinx transceivers.  The phase
+measurements that are being compared are that of the received data to the local
+clock in a bang-bang CDR circuit.  The PRBS data is pregenerated and is written
+to memory. It is sent in short bursts with a known sequence at the end. When
+the data arrives it is written to memory, is processed (searching for the known
+sequence), and is then checked for errors.  The phase caching
+improved locking time on switching by 12 times.
 
-\noindent In \cite{serrano2013white}, \cite{moreira2010digital}, and
-\cite{moreira2009white}, the white rabbit project is discussed. A white rabbit
-system provides sub-nanosecond synchronisation accuracy. To achieve this,
-accurate measurements of the link delay between the nodes of the network must
-be calculated.  While instructive, the method is not directly applicable to the
-project, as in a White Rabbit system, all the nodes are locked to the same
-frequency. Hence the link delay can be calculated by having a node receive a
-clock signal from another node, then return the same signal. The link delay can
-then be calculated by comparing the phase offset of the two signals.
+
+\noindent \cite{rylyakov201525}  This paper describes a very low latency burst
+mode optical receiver. They were able to achieve 25 Gb/s burst mode operation
+with a 31 ns lock time. In this paper, the receiver receives a burst of data,
+must calibrate to the voltage of the data, then engage the CDR circuit to
+recover the incoming data.  Again the CDR is a bang-bang CDR that is modified
+using a phase interpolator.  While this paper is not directly applicable as the
+receiver architecture differs from that of the transceiver of the board we are
+using, the problem they are trying to solve is similar and provides an idea of
+the locking times of a well optimised CDR.
+
+\noindent \cite{mendes_transceiver} this presentation describes a system where
+the phase of a transceiver on Xilinx board is kept stable over resets. While
+this was done on the transmitter side, it is applicable to this project as it
+uses the same transceivers (GTY Ultra-Scale+) and involves reading phase data
+and setting the phase of the transmitters. As the architecture of the
+transmitters and receivers is not dissimilar what is applicable at the
+transmitter may well be applicable at the receiver.
+
+\noindent \cite{serdes}  This application note describes the design of 
+a circuit that allows for the reception and transmission of 7:1 data using
+low-voltage differential signaling (LVDS) data transmission. Of note here is
+that the board's inbuilt circuitry allows makes designing serialiser/deserialiser
+circuits very simple. This may be preferable to using the inbuilt transceivers
+as it may be possible that we have more control over the inner workings of the
+system.
+
+\noindent \cite{dru_guide}, \cite{nidru} describe a Xilinx intellectual
+property that allows the high speed serial transceivers to be used at much
+lower data rates. This is done by oversampling the data. However it may not be
+applicable as it essentially operates as an IP that is placed after the
+transceiver interface and does not directly effect the behaviour of the
+transceiver. However it remains of interest as it may be easier to demonstrate a
+working system with lower data rates as a lower data rate would be forgiving in
+term of sampling/clock accuracy.
 
 \noindent \cite{williams2016source} described an optical source synchronous
 system. It describes how choosing the correct wavelength for the clock can
 minimise the modal cross-talk. Furthermore, in conjunction with
 \cite{ragab2011receiver} it describes how source synchronous systems are able
 to track correlated jitter between clock and data channels, and how system
-performance can be degraded by channel slew between clock and data channels.\\
-\cite{williams2019reconfiguration} further explored reducing the modal
+performance can be degraded by channel slew between clock and data channels.
+If the project is run at a lower data rate over multiple channels, this means
+that the jitter between the channels should be correlated if they are coming
+from the same device which would minimise the effects of such jitter.
+
+\cleardoublepage
+
+\noindent \cite{williams2019reconfiguration} further explored reducing the modal
 crosstalk by proposing an architecture with re-configurable clock and data
 paths, thus allowing the user to chose the optimal lane for the sensitive clock
-for each photonic interconnect. This may not be needed however, as each
-transmitter should have a fixed data characteristic.
+for each photonic interconnect. This is unlikely to be needed in this project, as each
+transmitter should have a fixed data characteristic, and as the hardware for
+both transmitters is similar, they should have a similar data characteristic. 
+In a situation where there are many different transmitters this may be useful.
+
+\noindent In \cite{serrano2013white}, \cite{moreira2010digital}, and
+\cite{moreira2009white}, the white rabbit project is discussed. A white rabbit
+system provides sub-nanosecond synchronisation accuracy. To achieve this,
+accurate measurements of the link delay between the nodes of the network must
+be calculated.  In a White Rabbit system, all the nodes are locked to the same
+frequency. Hence the link delay can be calculated by having a node receive a
+clock signal from another node, then return the same signal. The link delay can
+then be calculated by comparing the phase offset of the two signals.
+A similar system could potentially be used to determine the phase offset
+between a source and the receiver, although it is possible that the frequency
+of two sources may differ, and hence make this technique unusable.
 
 \noindent \cite{chen2017optimization} and \cite{fixed_latency} describe fixed
 latency links. In the event we were unable to bypass the CDR, it may be
 possible to organise the system to have a fixed latency, then force the CDR to
-the appropriate fixed phase. Thus the circuit could thus have a much reduced
-CDR lock time.
-
-\noindent \cite{dru_guide}, \cite{nidru} describe an Xilinx intellectual
-property that allows the high speed serial transceivers to be used at much
-lower data rates. This was initially of interest because it would have been
-easier to demonstrate a working system with lower data rates. However as this
-is an extra IP used in conjunction with the transceivers it did not turn out to
-be useful for the project. 
-
-\noindent \cite{mendes_transceiver} this presentation describes a system where
-the phase of a transceiver on Xilinx board is kept stable over resets. While
-this was done on the transmitter side it shows that fixing the phase of the
-transceiver is possible.
-
+the appropriate fixed phase. This is a workaround as it is not a true
+source-synchronous system. Nonetheless it may be useful as a point of
+comparison. 

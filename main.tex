@@ -35,44 +35,27 @@
 \cleardoublepage
 
 \begin{acknowledgements}
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit tellus
- id lectus egestas, sit amet finibus diam eleifend. Nulla nulla felis,
- hendrerit vel mi ac, tempus varius libero. Proin lobortis sapien eget
- malesuada aliquet. Nulla ac eleifend velit. Suspendisse feugiat magna
- convallis, consectetur leo a, ultrices ex. Aliquam suscipit mi eu tempor
- porttitor. In facilisis eget massa ac iaculis. Sed dolor lacus, scelerisque in
- diam vitae, finibus aliquam lorem. Donec eu leo eu lorem sodales varius. Donec
- dictum mauris sed ornare porttitor. Nunc imperdiet eu elit non hendrerit. Sed
- velit lectus, lacinia sed dolor vitae, faucibus eleifend felis. Aliquam ac ex
- enim. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent
- per conubia nostra, per inceptos himenaeos. Pellentesque pulvinar sollicitudin
- mattis.
+I would like to thank Dr. Georgios Zervas for his help and support during this
+project. He was approachable and encouraging throughout. 
+
+\noindent
+I am also very grateful to Vaibhawa Mishra and Kari Clark for being generous
+with their time and for sharing their knowledge with me. 
+
 \end{acknowledgements}
 
 \begin{abstract}
- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc blandit tellus
- id lectus egestas, sit amet finibus diam eleifend. Nulla nulla felis,
- hendrerit vel mi ac, tempus varius libero. Proin lobortis sapien eget
- malesuada aliquet. Nulla ac eleifend velit. Suspendisse feugiat magna
- convallis, consectetur leo a, ultrices ex. Aliquam suscipit mi eu tempor
- porttitor. In facilisis eget massa ac iaculis. Sed dolor lacus, scelerisque in
- diam vitae, finibus aliquam lorem. Donec eu leo eu lorem sodales varius. Donec
- dictum mauris sed ornare porttitor. Nunc imperdiet eu elit non hendrerit. Sed
- velit lectus, lacinia sed dolor vitae, faucibus eleifend felis. Aliquam ac ex
- enim. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent
- per conubia nostra, per inceptos himenaeos. Pellentesque pulvinar sollicitudin
- mattis.
+In this project we aim to develop a system that can perform burst-mode
+source-synchronous optical transmission to demonstrate the feasibility of
+such communication in data centres. Modern data centres require
+rapid switch reconfiguration, and optical switches could theoretically meet
+those requirements. However they are limited by CDR locking times which would be
+bypassed in a source-synchronous system.  We were not able to demonstrate a
+fully working system but were able to demonstrate bust-mode transmission and
+prepare hardware for optical transmission. We were not able to demonstrate
+source-synchronous reception.
 
-Duis vitae malesuada tellus, malesuada tincidunt sem. Nam dapibus mattis lorem,
-sagittis egestas risus ullamcorper a. Etiam finibus, libero non hendrerit
-scelerisque, nisl nisi blandit lacus, id laoreet tortor turpis sit amet sapien.
-Nullam non lacus ut tortor consequat auctor. Vivamus congue, massa in suscipit
-imperdiet, dui neque ultricies purus, ut fermentum sapien ante vel urna. Sed at
-blandit ligula. Sed non enim ante. Integer volutpat vestibulum leo, eu
-malesuada diam lacinia vel. Nulla ultrices leo eu cursus feugiat. Morbi semper
-nisl ex. Etiam volutpat consectetur sodales. Vestibulum facilisis dapibus enim,
-ac rutrum massa blandit vehicula. Aenean nec lectus varius, congue risus at,
-volutpat purus. Duis id rhoncus felis. 
+
 \end{abstract}
 
 \tableofcontents
@@ -96,6 +79,10 @@ volutpat purus. Duis id rhoncus felis.
 \label{cha:transceiver_settings}
 The configuration of the Transceiver Wizard can be found here.
 
+\section{Transceiver Wizard Settings}%
+\label{sec:transceiver_wizard_settings}
+
+
 \begin{figure}[ht]
     \centering
     \hspace*{-2cm}\includegraphics[width=1.3\linewidth]{img/transceiver1.png}
@@ -114,7 +101,11 @@ The configuration of the Transceiver Wizard can be found here.
 
 \cleardoublepage
 
-\begin{figure}[t]
+\section{External Clock Settings}%
+\label{sec:external_clock_settings}
+
+
+\begin{figure}[ht]
     \centering
     \hspace*{-2cm}\includegraphics[width=1.3\linewidth]{img/clock_settings.png}
     \caption{External Clock Settings}%
@@ -123,7 +114,8 @@ The configuration of the Transceiver Wizard can be found here.
 
 \cleardoublepage
 
-\begin{listing}
+\section{Constraints}%
+\label{sec:constraints}
 \begin{minted}[linenos,numbersep=5pt,frame=lines,framesep=2mm]{c}
 
 set_property PACKAGE_PIN AN41 [get_ports mgtrefclk0_x0y1_n] 
@@ -180,15 +172,86 @@ set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub] set_property
 C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub] connect_debug_port dbg_hub/clk
 [get_nets hb_gtwiz_reset_clk_freerun_buf_int]
 \end{minted}
-\caption{Constraints}
-\label{lst:constraints}
-\end{listing}
 
 \chapter{Verilog Code}%
 \label{cha:verilog_code}
 Here we include the different wrappers for the PRBS burst mode/checking. 
 Most of the code is provided by the Xilinx wizard~\cite{wizard_guide}. The
 modifications are the sections titled "Burst Mode Logic".
+
+\section{PRBS Generator/Checker Module}%
+\label{sec:prbs_generator_checker_module}
+Mainly unmodified, with the exception of line 60 - changed to output zeros when
+the enable flag is 1'b0.
+
+\begin{minted}[linenos,numbersep=5pt,frame=lines,framesep=2mm]{verilog}
+
+module gtwizard_ultrascale_1_prbs_any(RST, CLK, DATA_IN, EN, DATA_OUT);
+
+  //--------------------------------------------
+  // Configuration parameters
+  //--------------------------------------------
+   parameter CHK_MODE = 0;
+   parameter INV_PATTERN = 1;
+   parameter POLY_LENGHT = 31;
+   parameter POLY_TAP = 28;
+   parameter NBITS = 16;
+
+  //--------------------------------------------
+  // Input/Outputs
+  //--------------------------------------------
+
+   input  wire RST;
+   input  wire CLK;
+   input  wire [NBITS - 1:0] DATA_IN;
+   input  wire EN;
+   output reg  [NBITS - 1:0] DATA_OUT = {NBITS{1'b1}};
+
+  //--------------------------------------------
+  // Internal variables
+  //--------------------------------------------
+
+   wire [1:POLY_LENGHT] prbs[NBITS:0];
+   wire [NBITS - 1:0] data_in_i;
+   wire [NBITS - 1:0] prbs_xor_a;
+   wire [NBITS - 1:0] prbs_xor_b;
+   wire [NBITS:1] prbs_msb;
+   // reg [NBITS - 1:0] DATA_HOLD = {NBITS{1'b1}};
+   reg  [1:POLY_LENGHT]prbs_reg = {(POLY_LENGHT){1'b1}};
+
+  //--------------------------------------------
+  // Implementation
+  //--------------------------------------------
+
+   assign data_in_i = INV_PATTERN == 0 ? DATA_IN : ( ~DATA_IN);
+   assign prbs[0] = prbs_reg;
+
+   genvar I;
+   generate for (I=0; I<NBITS; I=I+1) begin : g1
+      assign prbs_xor_a[I] = prbs[I][POLY_TAP] ^ prbs[I][POLY_LENGHT];
+      assign prbs_xor_b[I] = prbs_xor_a[I] ^ data_in_i[I];
+      assign prbs_msb[I+1] = CHK_MODE == 0 ? prbs_xor_a[I]  :  data_in_i[I];
+      assign prbs[I+1] = {prbs_msb[I+1] , prbs[I][1:POLY_LENGHT-1]};
+   end
+   endgenerate
+
+   always @(posedge CLK) begin
+      if(RST == 1'b 1) begin
+         prbs_reg <= {POLY_LENGHT{1'b1}};
+         DATA_OUT <= {NBITS{1'b1}};
+      end
+      else if(EN == 1'b 1) begin
+         DATA_OUT <= prbs_xor_b;
+         prbs_reg <= prbs[NBITS];
+      end
+      else if(EN == 1'b 0) begin
+        DATA_OUT <= 32'b 0;
+      end
+  end
+
+endmodule
+\end{minted}
+\cleardoublepage
 
 \section{Single Channel Burst Mode}%
 \label{sec:single_channel_burst_mode}
@@ -499,5 +562,5 @@ endmodule
 \cleardoublepage
 \includepdf[pages=1,pagecommand=\chapter{SOA PCB Design}\label{cha:soa_pcb}]{soa.pdf}
 \includepdf[pages=1,pagecommand=\chapter{Substrate Design}\label{cha:substrate}]{substrate.pdf}
-\includepdf[page=-]{declaration.pdf}
+\includepdf[pages=-]{declaration.pdf}
 \end{document}

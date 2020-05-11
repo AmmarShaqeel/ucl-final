@@ -1,3 +1,23 @@
+@misc{gerard2020swift,
+    title         = {SWIFT: Scalable Ultra-Wideband Sub-Nanosecond Wavelength Switching for Data Centre Networks},
+    author        = {Thomas Gerard and Christopher Parsonson and Zacharaya Shabka and Polina Bayvel and Domaniç Lavery and Georgios Zervas},
+    year          = {2020},
+    eprint        = {2003.05489},
+    archivePrefix = {arXiv},
+    primaryClass  = {eess.SP}
+}
+
+@article{rylyakov201525,
+  title     = {A 25 Gb/s burst-mode receiver for low latency photonic switch networks},
+  author    = {Rylyakov, Alexander and Proesel, Jonathan E and Rylov, Sergey and Lee, Benjamin G and Bulzacchelli, John F and Ardey, Abhijeet and Parker, Ben and Beakes, Michael and Baks, Christian W and Schow, Clint L and others},
+  journal   = {IEEE Journal of Solid-State Circuits},
+  volume    = {50},
+  number    = {12},
+  pages     = {3120--3132},
+  year      = {2015},
+  publisher = {IEEE}
+}
+
 @incollection{ZHANG2015163,
 title     = "Chapter 4 - Link circuits and architecture",
 editor    = "Hanqiao Zhang and Steven Krooswyk and Jeff Ou",
@@ -112,121 +132,132 @@ year           = {2018}
   year         = {2009},
   organization = {IEEE}
 }
+    
+@manual{serdes,
+    author         = {Nick Sawyer},
+    title          = {LVDS Source Synchronous 7:1 Serialization and
+                      Deserialization Using Clock Multiplication},
+    date           = {July 18, 2018},
+    language       = {English},
+    version        = {1.1.2},
+    organization   = {Xilinx},
+    pagetotal      = {18},
+}
 
 @manual{wizard_guide,
-author         = {},
-title          = {UltraScale FPGAs
-Transceivers Wizard v1.7},
-date           = {June 21, 2019},
-language       = {English},
-version        = {1.7},
-organization   = {Xilinx},
-pagetotal      = {129},
+    author         = {},
+    title          = {UltraScale FPGAs
+                      Transceivers Wizard v1.7},
+    date           = {June 21, 2019},
+    language       = {English},
+    version        = {1.7},
+    organization   = {Xilinx},
+    pagetotal      = {129},
 }
 
 @manual{vcu118_guide,
-author         = {},
-title          = {VCU118 Evaluation Board},
-date           = {October 17, 2018},
-language       = {English},
-version        = {1.4},
-organization   = {Xilinx},
-pagetotal      = {132},
+    author         = {},
+    title          = {VCU118 Evaluation Board},
+    date           = {October 17, 2018},
+    language       = {English},
+    version        = {1.4},
+    organization   = {Xilinx},
+    pagetotal      = {132},
 }
 
 @manual{GTY_guide,
-author         = {},
-title          = {UltraScale Architecture
-GTY Transceivers},
-date           = {September 20, 2017},
-language       = {English},
-version        = {1.3},
-organization   = {Xilinx},
-pagetotal      = {446},
+    author         = {},
+    title          = {UltraScale Architecture
+                      GTY Transceivers},
+    date           = {September 20, 2017},
+    language       = {English},
+    version        = {1.3},
+    organization   = {Xilinx},
+    pagetotal      = {446},
 }
 
 @manual{dru_guide,
-author         = {Novellini, Paolo and Guasti, Giovanni},
-title          = {Dynamically Programmable DRU for High-Speed Serial I/O},
-date           = {January 13, 2010},
-language       = {English},
-version        = {1.1},
-organization   = {Xilinx},
-pagetotal      = {14},
+    author         = {Novellini, Paolo and Guasti, Giovanni},
+    title          = {Dynamically Programmable DRU for High-Speed Serial I/O},
+    date           = {January 13, 2010},
+    language       = {English},
+    version        = {1.1},
+    organization   = {Xilinx},
+    pagetotal      = {14},
 }
 
 @article{chen2017optimization,
-  title        = {Optimization on fixed low latency implementation of the GBT core in FPGA},
-  author       = {Chen, Kai and Chen, Hucheng and Wu, Weihao and Xu, Hao and Yao, Lin},
-  journal      = {Journal of Instrumentation},
-  volume       = {12},
-  number       = {07},
-  pages        = {P07011},
-  year         = {2017},
-  publisher    = {IOP Publishing}
+    title        = {Optimization on fixed low latency implementation of the GBT core in FPGA},
+    author       = {Chen, Kai and Chen, Hucheng and Wu, Weihao and Xu, Hao and Yao, Lin},
+    journal      = {Journal of Instrumentation},
+    volume       = {12},
+    number       = {07},
+    pages        = {P07011},
+    year         = {2017},
+    publisher    = {IOP Publishing}
 }
 
 @Article{fixed_latency,
-author         = "Liu, Xue
-and Deng, Qing-xu
-and Hou, Bo-ning
-and Wang, Ze-ke",
-title          = "High-speed, fixed-latency serial links with Xilinx FPGAs",
-journal        = "Journal of Zhejiang University SCIENCE C",
-year           = "2014",
-month          = "Feb",
-day            = "01",
-volume         = "15",
-number         = "2",
-pages          = "153--160",
-abstract       = "High-speed, fixed-latency serial links find application in distributed data acquisition and control systems, such as the timing trigger and control (TTC) system for high energy physics experiments. However, most high-speed serial transceivers do not keep the same chip latency after each power-up or reset, as there is no deterministic phase relationship between the transmitted and received clocks after each power-up. In this paper, we propose a fixed-latency serial link based on high-speed transceivers embedded in Xilinx field programmable gate arrays (FPGAs). First, we modify the configuration and clock distribution of the transceiver to eliminate the phase difference between the clock domains in the transmitter/receiver. Second, we use the internal alignment circuit of the transceiver and a digital clock manager (DCM)/phase-locked loop (PLL) based clock generator to eliminate the phase difference between the clock domains in the transmitter and receiver. The test results of the link latency are shown. Compared with existing solutions, our design not only implements fixed chip latency, but also reduces the average system lock time.",
-issn           = "1869-196X",
-doi            = "10.1631/jzus.C1300249",
-url            = "https://doi.org/10.1631/jzus.C1300249"
+    author         = "Liu, Xue
+    and Deng, Qing-xu
+    and Hou, Bo-ning
+    and Wang, Ze-ke",
+    title          = "High-speed, fixed-latency serial links with Xilinx FPGAs",
+    journal        = "Journal of Zhejiang University SCIENCE C",
+    year           = "2014",
+    month          = "Feb",
+    day            = "01",
+    volume         = "15",
+    number         = "2",
+    pages          = "153--160",
+    abstract       = "High-speed, fixed-latency serial links find application in distributed data acquisition and control systems, such as the timing trigger and control (TTC) system for high energy physics experiments. However, most high-speed serial transceivers do not keep the same chip latency after each power-up or reset, as there is no deterministic phase relationship between the transmitted and received clocks after each power-up. In this paper, we propose a fixed-latency serial link based on high-speed transceivers embedded in Xilinx field programmable gate arrays (FPGAs). First, we modify the configuration and clock distribution of the transceiver to eliminate the phase difference between the clock domains in the transmitter/receiver. Second, we use the internal alignment circuit of the transceiver and a digital clock manager (DCM)/phase-locked loop (PLL) based clock generator to eliminate the phase difference between the clock domains in the transmitter and receiver. The test results of the link latency are shown. Compared with existing solutions, our design not only implements fixed chip latency, but also reduces the average system lock time.",
+    issn           = "1869-196X",
+    doi            = "10.1631/jzus.C1300249",
+    url            = "https://doi.org/10.1631/jzus.C1300249"
 }
 
 @manual{nidru,
-author         = {Novellini, Paolo and Guasti, Giovanni and Di Fresco, Antonello},
-title          = {Clock and Data Recovery Unit based on Deserialized Oversampled Data},
-date           = {Feb 28, 2017},
-language       = {English},
-version        = {2.1},
-organization   = {Xilinx},
-pagetotal      = {25},
+    author         = {Novellini, Paolo and Guasti, Giovanni and Di Fresco, Antonello},
+    title          = {Clock and Data Recovery Unit based on Deserialized Oversampled Data},
+    date           = {Feb 28, 2017},
+    language       = {English},
+    version        = {2.1},
+    organization   = {Xilinx},
+    pagetotal      = {25},
 }
 
 @article{serrano2013white,
-  title        = {The white rabbit project},
-  author       = {Serrano, Javier and Lipinski, M and Wlostowski, T and Gousiou, E and van der Bij, Erik and Cattin, M and Daniluk, G},
-  journal      = {N/A},
-  year         = {2013}
+    title        = {The white rabbit project},
+    author       = {Serrano, Javier and Lipinski, M and Wlostowski, T and Gousiou, E and van der Bij, Erik and Cattin, M and Daniluk, G},
+    journal      = {N/A},
+    year         = {2013}
 }
 
 @article{ragab2011receiver,
-  title        = {Receiver jitter tracking characteristics in high-speed source synchronous links},
-  author       = {Ragab, Ahmed and Liu, Yang and Hu, Kangmin and Chiang, Patrick and Palermo, Samuel},
-  journal      = {Journal of Electrical and Computer Engineering},
-  volume       = {2011},
-  pages        = {5},
-  year         = {2011},
-  publisher    = {Hindawi Publishing Corp.}
+    title        = {Receiver jitter tracking characteristics in high-speed source synchronous links},
+    author       = {Ragab, Ahmed and Liu, Yang and Hu, Kangmin and Chiang, Patrick and Palermo, Samuel},
+    journal      = {Journal of Electrical and Computer Engineering},
+    volume       = {2011},
+    pages        = {5},
+    year         = {2011},
+    publisher    = {Hindawi Publishing Corp.}
 }
 
 @article{williams2019reconfiguration,
-  title        = {Reconfiguration in Source-Synchronous Receivers for Short-Reach Parallel Optical Links},
-  author       = {Williams, Christopher and Abdelrahman, Diaaeldin and Jia, Xiangdong and Abbas, Abdullah Ibn and Liboiron-Ladouceur, Odile and Cowan, Glenn ER},
-  journal      = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
-  year         = {2019},
-  publisher    = {IEEE}
+    title        = {Reconfiguration in Source-Synchronous Receivers for Short-Reach Parallel Optical Links},
+    author       = {Williams, Christopher and Abdelrahman, Diaaeldin and Jia, Xiangdong and Abbas, Abdullah Ibn and Liboiron-Ladouceur, Odile and Cowan, Glenn ER},
+    journal      = {IEEE Transactions on Very Large Scale Integration (VLSI) Systems},
+    year         = {2019},
+    publisher    = {IEEE}
 }
 
 @article{williams2016source,
-  title        = {A source-synchronous architecture using mode-division multiplexing for on-chip silicon photonic interconnects},
-  author       = {Williams, Christopher and Banan, Behnam and Cowan, Glenn and Liboiron-Ladouceur, Odile},
-  journal      = {IEEE Journal of Selected Topics in Quantum Electronics},
-  volume       = {22},
-  number       = {6},
-  pages        = {473--481},
-  year         = {2016},
-  publisher    = {IEEE}
+    title        = {A source-synchronous architecture using mode-division multiplexing for on-chip silicon photonic interconnects},
+    author       = {Williams, Christopher and Banan, Behnam and Cowan, Glenn and Liboiron-Ladouceur, Odile},
+    journal      = {IEEE Journal of Selected Topics in Quantum Electronics},
+    volume       = {22},
+    number       = {6},
+    pages        = {473--481},
+    year         = {2016},
+    publisher    = {IEEE}
 }

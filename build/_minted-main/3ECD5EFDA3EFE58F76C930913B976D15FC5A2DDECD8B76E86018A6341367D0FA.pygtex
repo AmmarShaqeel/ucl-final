@@ -1,0 +1,66 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{module} \PYG{n}{gtwizard\PYGZus{}ultrascale\PYGZus{}1\PYGZus{}prbs\PYGZus{}any}\PYG{p}{(}\PYG{n}{RST}\PYG{p}{,} \PYG{n}{CLK}\PYG{p}{,} \PYG{n}{DATA\PYGZus{}IN}\PYG{p}{,} \PYG{n}{EN}\PYG{p}{,} \PYG{n}{DATA\PYGZus{}OUT}\PYG{p}{);}
+
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{c+c1}{// Configuration parameters}
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+   \PYG{k}{parameter} \PYG{n}{CHK\PYGZus{}MODE} \PYG{o}{=} \PYG{l+m+mh}{0}\PYG{p}{;}
+   \PYG{k}{parameter} \PYG{n}{INV\PYGZus{}PATTERN} \PYG{o}{=} \PYG{l+m+mh}{1}\PYG{p}{;}
+   \PYG{k}{parameter} \PYG{n}{POLY\PYGZus{}LENGHT} \PYG{o}{=} \PYG{l+m+mh}{31}\PYG{p}{;}
+   \PYG{k}{parameter} \PYG{n}{POLY\PYGZus{}TAP} \PYG{o}{=} \PYG{l+m+mh}{28}\PYG{p}{;}
+   \PYG{k}{parameter} \PYG{n}{NBITS} \PYG{o}{=} \PYG{l+m+mh}{16}\PYG{p}{;}
+
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{c+c1}{// Input/Outputs}
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+   \PYG{k}{input}  \PYG{k+kt}{wire} \PYG{n}{RST}\PYG{p}{;}
+   \PYG{k}{input}  \PYG{k+kt}{wire} \PYG{n}{CLK}\PYG{p}{;}
+   \PYG{k}{input}  \PYG{k+kt}{wire} \PYG{p}{[}\PYG{n}{NBITS} \PYG{o}{\PYGZhy{}} \PYG{l+m+mh}{1}\PYG{o}{:}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{n}{DATA\PYGZus{}IN}\PYG{p}{;}
+   \PYG{k}{input}  \PYG{k+kt}{wire} \PYG{n}{EN}\PYG{p}{;}
+   \PYG{k}{output} \PYG{k+kt}{reg}  \PYG{p}{[}\PYG{n}{NBITS} \PYG{o}{\PYGZhy{}} \PYG{l+m+mh}{1}\PYG{o}{:}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{n}{DATA\PYGZus{}OUT} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{NBITS}\PYG{p}{\PYGZob{}}\PYG{l+m+mh}{1}\PYG{l+m+mb}{\PYGZsq{}b1}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{c+c1}{// Internal variables}
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+   \PYG{k+kt}{wire} \PYG{p}{[}\PYG{l+m+mh}{1}\PYG{o}{:}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{p}{]} \PYG{n}{prbs}\PYG{p}{[}\PYG{n+nl}{NBITS:}\PYG{l+m+mh}{0}\PYG{p}{];}
+   \PYG{k+kt}{wire} \PYG{p}{[}\PYG{n}{NBITS} \PYG{o}{\PYGZhy{}} \PYG{l+m+mh}{1}\PYG{o}{:}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{n}{data\PYGZus{}in\PYGZus{}i}\PYG{p}{;}
+   \PYG{k+kt}{wire} \PYG{p}{[}\PYG{n}{NBITS} \PYG{o}{\PYGZhy{}} \PYG{l+m+mh}{1}\PYG{o}{:}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}a}\PYG{p}{;}
+   \PYG{k+kt}{wire} \PYG{p}{[}\PYG{n}{NBITS} \PYG{o}{\PYGZhy{}} \PYG{l+m+mh}{1}\PYG{o}{:}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}b}\PYG{p}{;}
+   \PYG{k+kt}{wire} \PYG{p}{[}\PYG{n+nl}{NBITS:}\PYG{l+m+mh}{1}\PYG{p}{]} \PYG{n}{prbs\PYGZus{}msb}\PYG{p}{;}
+   \PYG{c+c1}{// reg [NBITS \PYGZhy{} 1:0] DATA\PYGZus{}HOLD = \PYGZob{}NBITS\PYGZob{}1\PYGZsq{}b1\PYGZcb{}\PYGZcb{};}
+   \PYG{k+kt}{reg}  \PYG{p}{[}\PYG{l+m+mh}{1}\PYG{o}{:}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{p}{]}\PYG{n}{prbs\PYGZus{}reg} \PYG{o}{=} \PYG{p}{\PYGZob{}(}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{p}{)\PYGZob{}}\PYG{l+m+mh}{1}\PYG{l+m+mb}{\PYGZsq{}b1}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+  \PYG{c+c1}{// Implementation}
+  \PYG{c+c1}{//\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+
+   \PYG{k}{assign} \PYG{n}{data\PYGZus{}in\PYGZus{}i} \PYG{o}{=} \PYG{n}{INV\PYGZus{}PATTERN} \PYG{o}{==} \PYG{l+m+mh}{0} \PYG{o}{?} \PYG{n}{DATA\PYGZus{}IN} \PYG{o}{:} \PYG{p}{(} \PYG{o}{\PYGZti{}}\PYG{n}{DATA\PYGZus{}IN}\PYG{p}{);}
+   \PYG{k}{assign} \PYG{n}{prbs}\PYG{p}{[}\PYG{l+m+mh}{0}\PYG{p}{]} \PYG{o}{=} \PYG{n}{prbs\PYGZus{}reg}\PYG{p}{;}
+
+   \PYG{k}{genvar} \PYG{n}{I}\PYG{p}{;}
+   \PYG{k}{generate} \PYG{k}{for} \PYG{p}{(}\PYG{n}{I}\PYG{o}{=}\PYG{l+m+mh}{0}\PYG{p}{;} \PYG{n}{I}\PYG{o}{\PYGZlt{}}\PYG{n}{NBITS}\PYG{p}{;} \PYG{n}{I}\PYG{o}{=}\PYG{n}{I}\PYG{o}{+}\PYG{l+m+mh}{1}\PYG{p}{)} \PYG{k}{begin} \PYG{o}{:} \PYG{n}{g1}
+      \PYG{k}{assign} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}a}\PYG{p}{[}\PYG{n}{I}\PYG{p}{]} \PYG{o}{=} \PYG{n}{prbs}\PYG{p}{[}\PYG{n}{I}\PYG{p}{][}\PYG{n}{POLY\PYGZus{}TAP}\PYG{p}{]} \PYG{o}{\PYGZca{}} \PYG{n}{prbs}\PYG{p}{[}\PYG{n}{I}\PYG{p}{][}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{p}{];}
+      \PYG{k}{assign} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}b}\PYG{p}{[}\PYG{n}{I}\PYG{p}{]} \PYG{o}{=} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}a}\PYG{p}{[}\PYG{n}{I}\PYG{p}{]} \PYG{o}{\PYGZca{}} \PYG{n}{data\PYGZus{}in\PYGZus{}i}\PYG{p}{[}\PYG{n}{I}\PYG{p}{];}
+      \PYG{k}{assign} \PYG{n}{prbs\PYGZus{}msb}\PYG{p}{[}\PYG{n}{I}\PYG{o}{+}\PYG{l+m+mh}{1}\PYG{p}{]} \PYG{o}{=} \PYG{n}{CHK\PYGZus{}MODE} \PYG{o}{==} \PYG{l+m+mh}{0} \PYG{o}{?} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}a}\PYG{p}{[}\PYG{n}{I}\PYG{p}{]}  \PYG{o}{:}  \PYG{n}{data\PYGZus{}in\PYGZus{}i}\PYG{p}{[}\PYG{n}{I}\PYG{p}{];}
+      \PYG{k}{assign} \PYG{n}{prbs}\PYG{p}{[}\PYG{n}{I}\PYG{o}{+}\PYG{l+m+mh}{1}\PYG{p}{]} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{n}{prbs\PYGZus{}msb}\PYG{p}{[}\PYG{n}{I}\PYG{o}{+}\PYG{l+m+mh}{1}\PYG{p}{]} \PYG{p}{,} \PYG{n}{prbs}\PYG{p}{[}\PYG{n}{I}\PYG{p}{][}\PYG{l+m+mh}{1}\PYG{o}{:}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{o}{\PYGZhy{}}\PYG{l+m+mh}{1}\PYG{p}{]\PYGZcb{};}
+   \PYG{k}{end}
+   \PYG{k}{endgenerate}
+
+   \PYG{k}{always} \PYG{p}{@(}\PYG{k}{posedge} \PYG{n}{CLK}\PYG{p}{)} \PYG{k}{begin}
+      \PYG{k}{if}\PYG{p}{(}\PYG{n}{RST} \PYG{o}{==} \PYG{l+m+mh}{1}\PYG{p}{\PYGZsq{}}\PYG{n}{b} \PYG{l+m+mh}{1}\PYG{p}{)} \PYG{k}{begin}
+         \PYG{n}{prbs\PYGZus{}reg} \PYG{o}{\PYGZlt{}=} \PYG{p}{\PYGZob{}}\PYG{n}{POLY\PYGZus{}LENGHT}\PYG{p}{\PYGZob{}}\PYG{l+m+mh}{1}\PYG{l+m+mb}{\PYGZsq{}b1}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+         \PYG{n}{DATA\PYGZus{}OUT} \PYG{o}{\PYGZlt{}=} \PYG{p}{\PYGZob{}}\PYG{n}{NBITS}\PYG{p}{\PYGZob{}}\PYG{l+m+mh}{1}\PYG{l+m+mb}{\PYGZsq{}b1}\PYG{p}{\PYGZcb{}\PYGZcb{};}
+      \PYG{k}{end}
+      \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{EN} \PYG{o}{==} \PYG{l+m+mh}{1}\PYG{p}{\PYGZsq{}}\PYG{n}{b} \PYG{l+m+mh}{1}\PYG{p}{)} \PYG{k}{begin}
+         \PYG{n}{DATA\PYGZus{}OUT} \PYG{o}{\PYGZlt{}=} \PYG{n}{prbs\PYGZus{}xor\PYGZus{}b}\PYG{p}{;}
+         \PYG{n}{prbs\PYGZus{}reg} \PYG{o}{\PYGZlt{}=} \PYG{n}{prbs}\PYG{p}{[}\PYG{n}{NBITS}\PYG{p}{];}
+      \PYG{k}{end}
+      \PYG{k}{else} \PYG{k}{if}\PYG{p}{(}\PYG{n}{EN} \PYG{o}{==} \PYG{l+m+mh}{1}\PYG{p}{\PYGZsq{}}\PYG{n}{b} \PYG{l+m+mh}{0}\PYG{p}{)} \PYG{k}{begin}
+        \PYG{n}{DATA\PYGZus{}OUT} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mh}{32}\PYG{p}{\PYGZsq{}}\PYG{n}{b} \PYG{l+m+mh}{0}\PYG{p}{;}
+      \PYG{k}{end}
+  \PYG{k}{end}
+
+\PYG{k}{endmodule}
+\end{Verbatim}

@@ -81,6 +81,42 @@ A.~Ragab, Y.~Liu, K.~Hu, P.~Chiang, and S.~Palermo, ``Receiver jitter tracking
   characteristics in high-speed source synchronous links,'' \emph{Journal of
   Electrical and Computer Engineering}, vol. 2011, p.~5, 2011.
 
+\bibitem{rylyakov201525}
+A.~Rylyakov, J.~E. Proesel, S.~Rylov, B.~G. Lee, J.~F. Bulzacchelli, A.~Ardey,
+  B.~Parker, M.~Beakes, C.~W. Baks, C.~L. Schow \emph{et~al.}, ``A 25 gb/s
+  burst-mode receiver for low latency photonic switch networks,'' \emph{IEEE
+  Journal of Solid-State Circuits}, vol.~50, no.~12, pp. 3120--3132, 2015.
+
+\bibitem{mendes_transceiver}
+{Eduardo Mendes}, ``Xilinx transceiver study,''
+  \textsc{url:}~\url{https://indico.cern.ch/event/717613/contributions/2948664/attachments/1637690/2613637/hptd_fixed_phase_xcvr_04_18_eduardo_mendes.pdf},
+  2018.
+
+\bibitem{serdes}
+N.~Sawyer, \emph{\BIBforeignlanguage{English}{LVDS Source Synchronous 7:1
+  Serialization and Deserialization Using Clock Multiplication}}, Xilinx.
+
+\bibitem{dru_guide}
+P.~Novellini and G.~Guasti, \emph{\BIBforeignlanguage{English}{Dynamically
+  Programmable DRU for High-Speed Serial I/O}}, Xilinx.
+
+\bibitem{nidru}
+P.~Novellini, G.~Guasti, and A.~Di~Fresco,
+  \emph{\BIBforeignlanguage{English}{Clock and Data Recovery Unit based on
+  Deserialized Oversampled Data}}, Xilinx.
+
+\bibitem{williams2016source}
+C.~Williams, B.~Banan, G.~Cowan, and O.~Liboiron-Ladouceur, ``A
+  source-synchronous architecture using mode-division multiplexing for on-chip
+  silicon photonic interconnects,'' \emph{IEEE Journal of Selected Topics in
+  Quantum Electronics}, vol.~22, no.~6, pp. 473--481, 2016.
+
+\bibitem{williams2019reconfiguration}
+C.~Williams, D.~Abdelrahman, X.~Jia, A.~I. Abbas, O.~Liboiron-Ladouceur, and
+  G.~E. Cowan, ``Reconfiguration in source-synchronous receivers for
+  short-reach parallel optical links,'' \emph{IEEE Transactions on Very Large
+  Scale Integration (VLSI) Systems}, 2019.
+
 \bibitem{serrano2013white}
 J.~Serrano, M.~Lipinski, T.~Wlostowski, E.~Gousiou, E.~van~der Bij, M.~Cattin,
   and G.~Daniluk, ``The white rabbit project,'' \emph{N/A}, 2013.
@@ -98,18 +134,6 @@ P.~Moreira, J.~Serrano, T.~Wlostowski, P.~Loschmidt, and G.~Gaderer, ``White
   Control and Communication}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
   2009, pp. 1--5.
 
-\bibitem{williams2016source}
-C.~Williams, B.~Banan, G.~Cowan, and O.~Liboiron-Ladouceur, ``A
-  source-synchronous architecture using mode-division multiplexing for on-chip
-  silicon photonic interconnects,'' \emph{IEEE Journal of Selected Topics in
-  Quantum Electronics}, vol.~22, no.~6, pp. 473--481, 2016.
-
-\bibitem{williams2019reconfiguration}
-C.~Williams, D.~Abdelrahman, X.~Jia, A.~I. Abbas, O.~Liboiron-Ladouceur, and
-  G.~E. Cowan, ``Reconfiguration in source-synchronous receivers for
-  short-reach parallel optical links,'' \emph{IEEE Transactions on Very Large
-  Scale Integration (VLSI) Systems}, 2019.
-
 \bibitem{chen2017optimization}
 K.~Chen, H.~Chen, W.~Wu, H.~Xu, and L.~Yao, ``Optimization on fixed low latency
   implementation of the gbt core in fpga,'' \emph{Journal of Instrumentation},
@@ -123,20 +147,6 @@ X.~Liu, Q.-x. Deng, B.-n. Hou, and Z.-k. Wang, ``High-speed, fixed-latency
   \url{https://doi.org/10.1631/jzus.C1300249}
 \BIBentrySTDinterwordspacing
 
-\bibitem{dru_guide}
-P.~Novellini and G.~Guasti, \emph{\BIBforeignlanguage{English}{Dynamically
-  Programmable DRU for High-Speed Serial I/O}}, Xilinx.
-
-\bibitem{nidru}
-P.~Novellini, G.~Guasti, and A.~Di~Fresco,
-  \emph{\BIBforeignlanguage{English}{Clock and Data Recovery Unit based on
-  Deserialized Oversampled Data}}, Xilinx.
-
-\bibitem{mendes_transceiver}
-{Eduardo Mendes}, ``Xilinx transceiver study,''
-  \textsc{url:}~\url{https://indico.cern.ch/event/717613/contributions/2948664/attachments/1637690/2613637/hptd_fixed_phase_xcvr_04_18_eduardo_mendes.pdf},
-  2018.
-
 \bibitem{wizard_guide}
 \emph{\BIBforeignlanguage{English}{UltraScale FPGAs Transceivers Wizard v1.7}},
   Xilinx.
@@ -147,5 +157,10 @@ P.~Novellini, G.~Guasti, and A.~Di~Fresco,
 \bibitem{GTY_guide}
 \emph{\BIBforeignlanguage{English}{UltraScale Architecture GTY Transceivers}},
   Xilinx.
+
+\bibitem{gerard2020swift}
+T.~Gerard, C.~Parsonson, Z.~Shabka, P.~Bayvel, D.~Lavery, and G.~Zervas,
+  ``Swift: Scalable ultra-wideband sub-nanosecond wavelength switching for data
+  centre networks,'' 2020.
 
 \end{thebibliography}

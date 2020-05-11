@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  10 MAY 2020 04:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  11 MAY 2020 01:57
 entering extended mode
 **./main.tex
 (main.tex
@@ -1087,7 +1087,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./img/ucl_banner-eps-converted-to.pdf): PDF incl
 usion: found PDF version <1.7>, but at most version <1.5> allowed
-<img/ucl_banner-eps-converted-to.pdf, id=138, 598.235pt x 114.4275pt>
+<img/ucl_banner-eps-converted-to.pdf, id=154, 598.235pt x 114.4275pt>
 File: img/ucl_banner-eps-converted-to.pdf Graphic file (type pdf)
 <use img/ucl_banner-eps-converted-to.pdf>
 Package pdftex.def Info: img/ucl_banner-eps-converted-to.pdf  used on input lin
@@ -1106,7 +1106,7 @@ g/ucl_banner-eps-converted-to.pdf>]pdfTeX warning (ext4): destination with the
 same identifier (name{page.i}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.52 \begin{abstract}
+l.47 \begin{abstract}
                       [1
 
 
@@ -1132,7 +1132,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 80.
+(Font)              using `T1/cmr/m/sc' instead on input line 63.
 
 [4]
 \openout2 = `chp/intro.aux'.
@@ -1148,12 +1148,12 @@ Chapter 1.
 
  (chp/theory.tex
 Chapter 2.
-<img/cdr_basic.png, id=217, 2640.86626pt x 1035.87pt>
+<img/cdr_basic.png, id=237, 2640.86626pt x 1035.87pt>
 File: img/cdr_basic.png Graphic file (type png)
 <use img/cdr_basic.png>
 Package pdftex.def Info: img/cdr_basic.png  used on input line 22.
 (pdftex.def)             Requested size: 366.4pt x 143.7089pt.
-<img/bang_bang.png, id=222, 2180.145pt x 879.285pt>
+<img/bang_bang.png, id=242, 2180.145pt x 879.285pt>
 File: img/bang_bang.png Graphic file (type png)
 <use img/bang_bang.png>
 Package pdftex.def Info: img/bang_bang.png  used on input line 37.
@@ -1163,33 +1163,35 @@ Package pdftex.def Info: img/bang_bang.png  used on input line 37.
 
 
  <./img/cdr_basic.png>]
-<img/shift_reg.png, id=237, 951.555pt x 584.1825pt>
+<img/shift_reg.png, id=257, 951.555pt x 584.1825pt>
 File: img/shift_reg.png Graphic file (type png)
 <use img/shift_reg.png>
 Package pdftex.def Info: img/shift_reg.png  used on input line 57.
 (pdftex.def)             Requested size: 146.55775pt x 89.96794pt.
-<img/source_sync.png, id=241, 1586.92876pt x 487.8225pt>
+<img/source_sync.png, id=261, 1586.92876pt x 487.8225pt>
 File: img/source_sync.png Graphic file (type png)
 <use img/source_sync.png>
 Package pdftex.def Info: img/source_sync.png  used on input line 103.
 (pdftex.def)             Requested size: 183.2pt x 56.31055pt.
-<img/soa.png, id=242, 785.93625pt x 611.28375pt>
+<img/soa.png, id=262, 785.93625pt x 611.28375pt>
 File: img/soa.png Graphic file (type png)
 <use img/soa.png>
 Package pdftex.def Info: img/soa.png  used on input line 120.
 (pdftex.def)             Requested size: 146.55775pt x 113.99048pt.
  [3 <./img/bang_bang.png> <./img/shift_reg.png>]
-[4 <./img/source_sync.png> <./img/soa.png>]) [5]
+[4 <./img/source_sync.png> <./img/soa.png>] [5]) [6
+
+]
 \openout2 = `chp/objectives.aux'.
 
  (chp/objectives.tex
 Chapter 3.
-<img/overview.png, id=293, 3119.655pt x 1297.84875pt>
+<img/overview.png, id=321, 3119.655pt x 1297.84875pt>
 File: img/overview.png Graphic file (type png)
 <use img/overview.png>
 Package pdftex.def Info: img/overview.png  used on input line 14.
 (pdftex.def)             Requested size: 366.4pt x 152.42793pt.
-) [6
+) [7
 
 
 
@@ -1198,36 +1200,37 @@ Package pdftex.def Info: img/overview.png  used on input line 14.
 
  (chp/method.tex
 Chapter 4.
-<img/loopback.png, id=302, 1117.17375pt x 499.8675pt>
+<img/loopback.png, id=330, 1117.17375pt x 499.8675pt>
 File: img/loopback.png Graphic file (type png)
 <use img/loopback.png>
-Package pdftex.def Info: img/loopback.png  used on input line 11.
+Package pdftex.def Info: img/loopback.png  used on input line 10.
 (pdftex.def)             Requested size: 183.2pt x 81.97116pt.
-<img/board.jpg, id=303, 391.4625pt x 293.59688pt>
+<img/board.jpg, id=331, 391.4625pt x 293.59688pt>
 File: img/board.jpg Graphic file (type jpg)
 <use img/board.jpg>
-Package pdftex.def Info: img/board.jpg  used on input line 27.
+Package pdftex.def Info: img/board.jpg  used on input line 26.
 (pdftex.def)             Requested size: 183.2pt x 137.39919pt.
-<img/clock.jpg, id=304, 642.4pt x 689.57625pt>
+<img/clock.jpg, id=332, 642.4pt x 689.57625pt>
 File: img/clock.jpg Graphic file (type jpg)
 <use img/clock.jpg>
-Package pdftex.def Info: img/clock.jpg  used on input line 36.
+Package pdftex.def Info: img/clock.jpg  used on input line 35.
 (pdftex.def)             Requested size: 175.87444pt x 188.78702pt.
-<img/fmc.png, id=305, 181.42781pt x 303.38344pt>
+<img/fmc.png, id=333, 181.42781pt x 303.38344pt>
 File: img/fmc.png Graphic file (type png)
 <use img/fmc.png>
-Package pdftex.def Info: img/fmc.png  used on input line 42.
+Package pdftex.def Info: img/fmc.png  used on input line 41.
 (pdftex.def)             Requested size: 87.93721pt x 147.05283pt.
-[7
+[8
 
 
 
- <./img/loopback.png> <./img/board.jpg>] [8 <./img/clock.jpg> <./img/fmc.png>]
-Overfull \hbox (98.46465pt too wide) in paragraph at lines 96--115
+ <./img/loopback.png> <./img/board.jpg>] [9 <./img/clock.jpg> <./img/fmc.png>]
+Overfull \hbox (98.46465pt too wide) in paragraph at lines 95--114
  []| [] 
  []
 
-<img/transmitter_block.png, id=327, 1199.98312pt x 586.44093pt>
+[10]
+<img/transmitter_block.png, id=363, 1199.98312pt x 586.44093pt>
 File: img/transmitter_block.png Graphic file (type png)
 <use img/transmitter_block.png>
 Package pdftex.def Info: img/transmitter_block.png  used on input line 147.
@@ -1237,119 +1240,150 @@ Overfull \hbox (44.82613pt too wide) in paragraph at lines 147--148
  []| [] 
  []
 
-[9]
-<img/burst_mode_1.png, id=342, 1043.39813pt x 209.28188pt>
+<img/tx_interface.png, id=367, 1065.9825pt x 725.71124pt>
+File: img/tx_interface.png Graphic file (type png)
+<use img/tx_interface.png>
+Package pdftex.def Info: img/tx_interface.png  used on input line 159.
+(pdftex.def)             Requested size: 219.84222pt x 149.65764pt.
+[11
+
+ <./img/transmitter_block.png> <./img/tx_interface.png>]
+<img/burst_mode_1.png, id=379, 1043.39813pt x 209.28188pt>
 File: img/burst_mode_1.png Graphic file (type png)
 <use img/burst_mode_1.png>
-Package pdftex.def Info: img/burst_mode_1.png  used on input line 175.
-(pdftex.def)             Requested size: 549.59999pt x 110.23866pt.
+Package pdftex.def Info: img/burst_mode_1.png  used on input line 182.
+(pdftex.def)             Requested size: 512.95775pt x 102.8875pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 175--176
+Overfull \hbox (61.1995pt too wide) in paragraph at lines 182--183
  []| [] 
  []
 
-<img/burst_mode_2.png, id=345, 1047.16219pt x 188.95593pt>
+<img/burst_mode_2.png, id=382, 1047.16219pt x 188.95593pt>
 File: img/burst_mode_2.png Graphic file (type png)
 <use img/burst_mode_2.png>
-Package pdftex.def Info: img/burst_mode_2.png  used on input line 189.
-(pdftex.def)             Requested size: 549.59999pt x 99.1745pt.
+Package pdftex.def Info: img/burst_mode_2.png  used on input line 196.
+(pdftex.def)             Requested size: 512.95775pt x 92.56326pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 189--190
+Overfull \hbox (61.1995pt too wide) in paragraph at lines 196--197
  []| [] 
  []
 
-<img/burst_mode_3.png, id=346, 1038.12843pt x 191.21437pt>
+<img/burst_mode_3.png, id=383, 1038.12843pt x 191.21437pt>
 File: img/burst_mode_3.png Graphic file (type png)
 <use img/burst_mode_3.png>
-Package pdftex.def Info: img/burst_mode_3.png  used on input line 196.
-(pdftex.def)             Requested size: 549.59999pt x 101.22934pt.
+Package pdftex.def Info: img/burst_mode_3.png  used on input line 203.
+(pdftex.def)             Requested size: 512.95775pt x 94.48071pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 196--197
+Overfull \hbox (61.1995pt too wide) in paragraph at lines 203--204
  []| [] 
  []
 
-[10 <./img/transmitter_block.png> <./img/burst_mode_1.png>]
-<img/two_channel.png, id=360, 1038.88126pt x 245.41687pt>
+[12 <./img/burst_mode_1.png> <./img/burst_mode_2.png> <./img/burst_mode_3.png>]
+<img/two_channel.png, id=397, 1038.88126pt x 245.41687pt>
 File: img/two_channel.png Graphic file (type png)
 <use img/two_channel.png>
-Package pdftex.def Info: img/two_channel.png  used on input line 212.
+Package pdftex.def Info: img/two_channel.png  used on input line 220.
 (pdftex.def)             Requested size: 512.95775pt x 121.17651pt.
 
-Overfull \hbox (61.1995pt too wide) in paragraph at lines 212--213
+Overfull \hbox (61.1995pt too wide) in paragraph at lines 220--221
  []| [] 
  []
 
-[11 <./img/burst_mode_2.png> <./img/burst_mode_3.png> <./img/two_channel.png>]
-<img/receiver_block.png, id=371, 796.47563pt x 344.78813pt>
+[13 <./img/two_channel.png>]
+<img/receiver_block.png, id=406, 796.47563pt x 344.78813pt>
 File: img/receiver_block.png Graphic file (type png)
 <use img/receiver_block.png>
-Package pdftex.def Info: img/receiver_block.png  used on input line 227.
+Package pdftex.def Info: img/receiver_block.png  used on input line 235.
 (pdftex.def)             Requested size: 439.67886pt x 190.33377pt.
 
-Overfull \hbox (44.82613pt too wide) in paragraph at lines 227--228
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 235--236
  []| [] 
  []
 
-<img/burst_check.png, id=376, 1041.1397pt x 173.89969pt>
+<img/rx_interface.png, id=409, 1065.9825pt x 725.71124pt>
+File: img/rx_interface.png Graphic file (type png)
+<use img/rx_interface.png>
+Package pdftex.def Info: img/rx_interface.png  used on input line 245.
+(pdftex.def)             Requested size: 219.84222pt x 149.65764pt.
+[14
+
+ <./img/receiver_block.png> <./img/rx_interface.png>]
+<img/burst_check.png, id=421, 1041.1397pt x 173.89969pt>
 File: img/burst_check.png Graphic file (type png)
 <use img/burst_check.png>
-Package pdftex.def Info: img/burst_check.png  used on input line 247.
+Package pdftex.def Info: img/burst_check.png  used on input line 265.
 (pdftex.def)             Requested size: 549.59999pt x 91.79755pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 247--248
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 265--266
  []| [] 
  []
 
-[12
-
- <./img/receiver_block.png> <./img/burst_check.png>]
-<img/burst_check_2.png, id=387, 1035.11719pt x 194.97844pt>
+<img/burst_check_2.png, id=423, 1035.11719pt x 194.97844pt>
 File: img/burst_check_2.png Graphic file (type png)
 <use img/burst_check_2.png>
-Package pdftex.def Info: img/burst_check_2.png  used on input line 261.
+Package pdftex.def Info: img/burst_check_2.png  used on input line 283.
 (pdftex.def)             Requested size: 549.59999pt x 103.52847pt.
 
-Overfull \hbox (97.84174pt too wide) in paragraph at lines 261--262
+Overfull \hbox (97.84174pt too wide) in paragraph at lines 283--284
  []| [] 
  []
 
-<img/cdr_detail.png, id=390, 904.1278pt x 273.27094pt>
+[15
+
+ <./img/burst_check.png> <./img/burst_check_2.png>]
+<img/cdr_detail.png, id=436, 904.1278pt x 273.27094pt>
 File: img/cdr_detail.png Graphic file (type png)
 <use img/cdr_detail.png>
-Package pdftex.def Info: img/cdr_detail.png  used on input line 284.
+Package pdftex.def Info: img/cdr_detail.png  used on input line 306.
 (pdftex.def)             Requested size: 439.67886pt x 132.89066pt.
 
-Overfull \hbox (44.82613pt too wide) in paragraph at lines 284--285
+Overfull \hbox (44.82613pt too wide) in paragraph at lines 306--307
  []| [] 
  []
 
-[13 <./img/burst_check_2.png> <./img/cdr_detail.png>]
-<img/soa_circuit.png, id=404, 2592.68625pt x 1273.75874pt>
-File: img/soa_circuit.png Graphic file (type png)
-<use img/soa_circuit.png>
-Package pdftex.def Info: img/soa_circuit.png  used on input line 326.
-(pdftex.def)             Requested size: 403.04222pt x 197.9942pt.
 
-Overfull \hbox (36.64223pt too wide) in paragraph at lines 326--327
- [][] 
+Overfull \hbox (15.2327pt too wide) in paragraph at lines 311--318
+[]\T1/cmr/m/n/10 The fi-nal goal of the project would have been to run the re-c
+eiver source-synchronously.
  []
 
-[14 <./img/soa_circuit.png>]
-<img/full_mount.jpeg, id=414, 4047.12pt x 3035.34pt>
+[16 <./img/cdr_detail.png>]
+<img/soa_circuit.png, id=447, 2592.68625pt x 1273.75874pt>
+File: img/soa_circuit.png Graphic file (type png)
+<use img/soa_circuit.png>
+Package pdftex.def Info: img/soa_circuit.png  used on input line 356.
+(pdftex.def)             Requested size: 476.3211pt x 234.00905pt.
+
+Overfull \hbox (81.46837pt too wide) in paragraph at lines 356--357
+ []| [] 
+ []
+
+[17
+
+ <./img/soa_circuit.png>]
+<img/full_mount.jpeg, id=458, 4047.12pt x 3035.34pt>
 File: img/full_mount.jpeg Graphic file (type jpg)
 <use img/full_mount.jpeg>
-Package pdftex.def Info: img/full_mount.jpeg  used on input line 341.
+Package pdftex.def Info: img/full_mount.jpeg  used on input line 377.
 (pdftex.def)             Requested size: 293.12111pt x 219.81335pt.
-) [15 <./img/full_mount.jpeg>]
+) [18
+
+ <./img/full_mount.jpeg>]
 \openout2 = `chp/conclusion.aux'.
 
  (chp/conclusion.tex
 Chapter 5.
-) [16
+) [19
 
 
 
-] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl [17
+] (C:\Users\ammar_laptop\Documents\thesis\./build\main.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 91--94
+\T1/cmr/m/n/10 717613 / contributions / 2948664 / attachments / 1637690 / 26136
+37 / hptd _ xed _
+ []
+
+[20
 
 
 ]
@@ -1359,12 +1393,9 @@ Chapter 5.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-
-Underfull \hbox (badness 10000) in paragraph at lines 136--139
-\T1/cmr/m/n/10 717613 / contributions / 2948664 / attachments / 1637690 / 26136
-37 / hptd _ xed _
- []
-
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
@@ -1377,16 +1408,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--139
 )
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 94.
+(Font)              using `T1/cmr/m/sc' instead on input line 77.
 
-[18]
-<img/transceiver1.png, id=440, 1139.75812pt x 723.45282pt>
+[21]
+<img/transceiver1.png, id=485, 1139.75812pt x 723.45282pt>
 File: img/transceiver1.png Graphic file (type png)
 <use img/transceiver1.png>
-Package pdftex.def Info: img/transceiver1.png  used on input line 101.
+Package pdftex.def Info: img/transceiver1.png  used on input line 88.
 (pdftex.def)             Requested size: 476.3211pt x 302.33577pt.
 
-Overfull \hbox (53.01561pt too wide) in paragraph at lines 101--102
+Overfull \hbox (53.01561pt too wide) in paragraph at lines 88--89
  []| [] 
  []
 
@@ -1394,11 +1425,26 @@ Overfull \hbox (53.01561pt too wide) in paragraph at lines 101--102
 
 
  <./img/transceiver1.png>]
-<img/transceiver2.png, id=449, 1130.72438pt x 809.27344pt>
+<img/transceiver2.png, id=494, 1130.72438pt x 809.27344pt>
 File: img/transceiver2.png Graphic file (type png)
 <use img/transceiver2.png>
-Package pdftex.def Info: img/transceiver2.png  used on input line 110.
+Package pdftex.def Info: img/transceiver2.png  used on input line 97.
 (pdftex.def)             Requested size: 476.3211pt x 340.9051pt.
+
+Overfull \hbox (53.01561pt too wide) in paragraph at lines 97--98
+ []| [] 
+ []
+
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 102.
+
+[2 <./img/transceiver2.png>]
+<img/clock_settings.png, id=501, 657.2053pt x 430.60875pt>
+File: img/clock_settings.png Graphic file (type png)
+<use img/clock_settings.png>
+Package pdftex.def Info: img/clock_settings.png  used on input line 110.
+(pdftex.def)             Requested size: 476.3211pt x 312.09464pt.
 
 Overfull \hbox (53.01561pt too wide) in paragraph at lines 110--111
  []| [] 
@@ -1408,61 +1454,64 @@ Overfull \hbox (53.01561pt too wide) in paragraph at lines 110--111
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 115.
 
-[2 <./img/transceiver2.png>]
-<img/clock_settings.png, id=457, 657.2053pt x 430.60875pt>
-File: img/clock_settings.png Graphic file (type png)
-<use img/clock_settings.png>
-Package pdftex.def Info: img/clock_settings.png  used on input line 119.
-(pdftex.def)             Requested size: 476.3211pt x 312.09464pt.
-
-Overfull \hbox (53.01561pt too wide) in paragraph at lines 119--120
- []| [] 
- []
+[3
 
 
-LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 124.
-
-[3 <./img/clock_settings.png>]
+ <./img/clock_settings.png>]
 \openout4 = `main.pyg'.
 
  (build/_minted-main/default-pyg-prefix.pygstyle) (build/_minted-main/default.p
 ygstyle)
 (build/_minted-main/5EBADBF3DE5EB67294148DC798AE37B8518A88E331BBBC9A25B5A18C67E
-AD7D1.pygtex)
-Package hyperref Info: bookmark level for unknown listing defaults to 0 on inpu
-t line 183.
-
-
-LaTeX Warning: Float too large for page by 79.40274pt on input line 185.
-
+AD7D1.pygtex
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 187.
+(Font)              using `T1/cmr/m/sc' instead on input line 50.
 
-[4]
+[4
+
+])
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 176.
+
+[5]
+\openout4 = `main.pyg'.
+
+
+(build/_minted-main/3ECD5EFDA3EFE58F76C930913B976D15FC5A2DDECD8B76E86018A634136
+7D0FA.pygtex
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+21.
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+) [1
+
+])
+
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 254.
+
+[2]
 \openout4 = `main.pyg'.
 
 
 (build/_minted-main/6D8C51BCAB4867CC462AF1BD38430420FC5A2DDECD8B76E86018A634136
 7D0FA.pygtex
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 2.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-32.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/base\ts1cmtt.fd"
-File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [1
 
+LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
+(Font)              using `T1/cmr/m/sc' instead on input line 50.
 
-
+[3
 
 ])
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 278.
+(Font)              using `T1/cmr/m/sc' instead on input line 341.
 
-[2]
+[4]
 \openout4 = `main.pyg'.
 
 
@@ -1472,19 +1521,19 @@ LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 50.
 
-[3
+[5
 
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 100.
 
-[4])
+[6])
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 387.
+(Font)              using `T1/cmr/m/sc' instead on input line 450.
 
-[5]
+[7]
 \openout4 = `main.pyg'.
 
 
@@ -1494,26 +1543,26 @@ LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 50.
 
-[6
+[8
 
 ]
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
 (Font)              using `T1/cmr/m/sc' instead on input line 100.
 
-[7])
+[9])
 
 LaTeX Font Warning: Font shape `T1/cmr/m/scsl' undefined
-(Font)              using `T1/cmr/m/sc' instead on input line 499.
+(Font)              using `T1/cmr/m/sc' instead on input line 562.
 
-[8]
+[10]
 
 pdfTeX warning: pdflatex (file ./soa.pdf): PDF inclusion: found PDF version <1.
 7>, but at most version <1.5> allowed
-<soa.pdf, id=508, 794.97pt x 614.295pt>
+<soa.pdf, id=565, 794.97pt x 614.295pt>
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf>
-Package pdftex.def Info: soa.pdf  used on input line 500.
+Package pdftex.def Info: soa.pdf  used on input line 563.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -1521,7 +1570,7 @@ pdfTeX warning: pdflatex (file ./soa.pdf): PDF inclusion: found PDF version <1.
 7>, but at most version <1.5> allowed
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf>
-Package pdftex.def Info: soa.pdf  used on input line 500.
+Package pdftex.def Info: soa.pdf  used on input line 563.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 
 
@@ -1531,77 +1580,71 @@ pdfTeX warning: pdflatex (file ./soa.pdf): PDF inclusion: found PDF version <1.
 
 pdfTeX warning: pdflatex (file ./soa.pdf): PDF inclusion: found PDF version <1.
 7>, but at most version <1.5> allowed
-<soa.pdf, id=511, page=1, 794.97pt x 614.295pt>
+<soa.pdf, id=568, page=1, 794.97pt x 614.295pt>
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf, page 1>
-Package pdftex.def Info: soa.pdf , page1 used on input line 500.
+Package pdftex.def Info: soa.pdf , page1 used on input line 563.
 (pdftex.def)             Requested size: 794.96806pt x 614.29349pt.
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf, page 1>
-Package pdftex.def Info: soa.pdf , page1 used on input line 500.
+Package pdftex.def Info: soa.pdf , page1 used on input line 563.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf, page 1>
-Package pdftex.def Info: soa.pdf , page1 used on input line 500.
+Package pdftex.def Info: soa.pdf , page1 used on input line 563.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf, page 1>
-Package pdftex.def Info: soa.pdf , page1 used on input line 500.
+Package pdftex.def Info: soa.pdf , page1 used on input line 563.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 File: soa.pdf Graphic file (type pdf)
 <use soa.pdf, page 1>
-Package pdftex.def Info: soa.pdf , page1 used on input line 500.
+Package pdftex.def Info: soa.pdf , page1 used on input line 563.
 (pdftex.def)             Requested size: 598.22752pt x 462.26671pt.
 [1
 
 
  <./soa.pdf>]
-<substrate.pdf, id=518, 844.95674pt x 597.432pt>
+<substrate.pdf, id=575, 844.95674pt x 597.432pt>
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf>
-Package pdftex.def Info: substrate.pdf  used on input line 501.
+Package pdftex.def Info: substrate.pdf  used on input line 564.
 (pdftex.def)             Requested size: 844.95468pt x 597.43054pt.
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf>
-Package pdftex.def Info: substrate.pdf  used on input line 501.
+Package pdftex.def Info: substrate.pdf  used on input line 564.
 (pdftex.def)             Requested size: 844.95468pt x 597.43054pt.
-<substrate.pdf, id=521, page=1, 844.95674pt x 597.432pt>
+<substrate.pdf, id=578, page=1, 844.95674pt x 597.432pt>
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf, page 1>
-Package pdftex.def Info: substrate.pdf , page1 used on input line 501.
+Package pdftex.def Info: substrate.pdf , page1 used on input line 564.
 (pdftex.def)             Requested size: 844.95468pt x 597.43054pt.
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf, page 1>
-Package pdftex.def Info: substrate.pdf , page1 used on input line 501.
+Package pdftex.def Info: substrate.pdf , page1 used on input line 564.
 (pdftex.def)             Requested size: 598.18294pt x 422.94902pt.
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf, page 1>
-Package pdftex.def Info: substrate.pdf , page1 used on input line 501.
+Package pdftex.def Info: substrate.pdf , page1 used on input line 564.
 (pdftex.def)             Requested size: 598.18294pt x 422.94902pt.
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf, page 1>
-Package pdftex.def Info: substrate.pdf , page1 used on input line 501.
+Package pdftex.def Info: substrate.pdf , page1 used on input line 564.
 (pdftex.def)             Requested size: 598.18294pt x 422.94902pt.
 File: substrate.pdf Graphic file (type pdf)
 <use substrate.pdf, page 1>
-Package pdftex.def Info: substrate.pdf , page1 used on input line 501.
+Package pdftex.def Info: substrate.pdf , page1 used on input line 564.
 (pdftex.def)             Requested size: 598.18294pt x 422.94902pt.
  [1
 
  <./substrate.pdf>]
 
-Package pdfpages Warning: Option `page' is unknow to \includepdf.
-(pdfpages)                Did you mean `pages'? (Note the `s'!)
-(pdfpages)                OK, I'll proceed as if it were `pages'.
-
-
-
 pdfTeX warning: pdflatex (file ./declaration.pdf): PDF inclusion: found PDF ver
 sion <1.7>, but at most version <1.5> allowed
-<declaration.pdf, id=531, 597.23125pt x 845.1575pt>
+<declaration.pdf, id=588, 597.23125pt x 845.1575pt>
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf>
-Package pdftex.def Info: declaration.pdf  used on input line 502.
+Package pdftex.def Info: declaration.pdf  used on input line 565.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 
@@ -1609,7 +1652,7 @@ pdfTeX warning: pdflatex (file ./declaration.pdf): PDF inclusion: found PDF ver
 sion <1.7>, but at most version <1.5> allowed
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf>
-Package pdftex.def Info: declaration.pdf  used on input line 502.
+Package pdftex.def Info: declaration.pdf  used on input line 565.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 
 
@@ -1619,30 +1662,30 @@ sion <1.7>, but at most version <1.5> allowed
 
 pdfTeX warning: pdflatex (file ./declaration.pdf): PDF inclusion: found PDF ver
 sion <1.7>, but at most version <1.5> allowed
-<declaration.pdf, id=534, page=1, 597.23125pt x 845.1575pt>
+<declaration.pdf, id=591, page=1, 597.23125pt x 845.1575pt>
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
-Package pdftex.def Info: declaration.pdf , page1 used on input line 502.
+Package pdftex.def Info: declaration.pdf , page1 used on input line 565.
 (pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
-Package pdftex.def Info: declaration.pdf , page1 used on input line 502.
+Package pdftex.def Info: declaration.pdf , page1 used on input line 565.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
-Package pdftex.def Info: declaration.pdf , page1 used on input line 502.
+Package pdftex.def Info: declaration.pdf , page1 used on input line 565.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
-Package pdftex.def Info: declaration.pdf , page1 used on input line 502.
+Package pdftex.def Info: declaration.pdf , page1 used on input line 565.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 File: declaration.pdf Graphic file (type pdf)
 <use declaration.pdf, page 1>
-Package pdftex.def Info: declaration.pdf , page1 used on input line 502.
+Package pdftex.def Info: declaration.pdf , page1 used on input line 565.
 (pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
 [2 <./declaration.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 503.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
 
 (C:\Users\ammar_laptop\Documents\thesis\./build\main.aux
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/intro.aux)
@@ -1650,22 +1693,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 503.
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/objectives.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/method.aux)
 (C:\Users\ammar_laptop\Documents\thesis\./build\chp/conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 503.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 503.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 663812A5557B3A93BAA70888FF4AB547;1703.
+(rerunfilecheck)             Checksum: 513F49ACE1DD39D925EE20CDE0AE4460;2001.
 runsystem(del build\\main.pyg)...executed.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 503.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
  ) 
 Here is how much of TeX's memory you used:
- 26017 strings out of 480894
- 508398 string characters out of 2908216
- 827770 words of memory out of 3000000
- 41149 multiletter control sequences out of 15000+200000
- 547261 words of font info for 53 fonts, out of 3000000 for 9000
+ 26061 strings out of 480894
+ 509675 string characters out of 2908216
+ 828240 words of memory out of 3000000
+ 41173 multiletter control sequences out of 15000+200000
+ 547559 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,18n,119p,958b,650s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 74i,18n,119p,958b,659s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{C:/Pr
 ogram Files/MiKTeX 2.9/fonts/enc/dvips/cm-super/cm-super-t1.enc}<C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX
@@ -1684,10 +1727,10 @@ uper/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
 1440.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfti1000.pfb>
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (38 pag
-es, 6361556 bytes).
+Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (44 pag
+es, 6433285 bytes).
 PDF statistics:
- 646 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
- 510 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 708 PDF objects out of 1000 (max. 8388607)
+ 145 named destinations out of 1000 (max. 500000)
+ 552 words of extra memory for PDF output out of 10000 (max. 10000000)
 

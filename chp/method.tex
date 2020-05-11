@@ -1,10 +1,9 @@
 \chapter{Implementation and Results}
-In this section we cover the implementation of the project and the results.
-As outlined in the Objectives section we can divide the tasks into three main
-parts: transmission, optical conversion ,and reception. 
-In this project we looked at using a FPGA board for the generation and
-reception of the PRBS data.  Hence the overall design is of a board in a
-loopback configuration as shown in Figure~\ref{fig:loopback}.
+As outlined in the Objectives we can divide the tasks into three main parts:
+transmission, optical conversion, and reception.  In this project we looked at
+using an FPGA board for the generation and reception of the PRBS data.  Hence
+the overall design is of a board in a loopback configuration as shown in
+Figure~\ref{fig:loopback}.
 
 \begin{figure}[ht]
     \centering
@@ -83,10 +82,10 @@ driving two transmitters, it was not an issue.
 
 \subsubsection{Pin Configuration}%
 \label{ssub:pin_configuration}
-It was also necessary to map the pins from the pins on the board to those on
+It was also necessary to map the pins on the board to those on
 the FMC-MSMP module. This was done as in Table~\ref{tab:pinout}.
-As two transceivers were used, we mapped out the pins for clocks, transmitters,
-and recievers of both.
+As two transceivers were used, we mapped out the pins for the clocks, transmitters,
+and receivers of both.
 
 \noindent For a full pinout diagram refer to the user guide of the board
 \cite{vcu118_guide}. 
@@ -121,25 +120,26 @@ and recievers of both.
 \label{ssub:transceiver_configuration}
 The transceivers were programmed to run at a standard rate of 10GB/s, with a
 reference clock taken from the external Si5345 clock which was configured to
-run at 156.25 MHz with a format of 2.5 V LVDS.
+run at 156.25 MHz with a format of 2.5V LVDS.
 The free-running clock (used to drive resets) was driven at 125 MHz, sourced
 from the onboard 300 MHz system clock.  The reset functions were bound to the
 physical push buttons BE23 and BB24.  Status indicators (Link Up and Link Down)
 were bound to LED1 and LED0 respectively. 
 
-At the current stage there was no encoding in the setup as we were trying to
-troubleshoot an issue with the PRBS checking module. However if running the
-system for a long period of time, encoding would be necessary to ensure the CDR
-remained locked.
+At the current stage there was no encoding as we were trying to troubleshoot an
+issue with the PRBS checking module. However if running the system for a long
+period of time, encoding would be necessary to ensure the CDR remained locked.
+This can be easily done from the transceiver wizard.
 The full details of the setup can be found in
 Appendix~\ref{cha:transceiver_settings}.
 
 
+\cleardoublepage
 \subsection{Transmitter}%
 \label{sub:transmitter}
 In Figure~\ref{fig:transmitter_block} we see a block diagram of the transmitter
 (TX) of the transceiver. Parallel data flows into the TX interface,
-and is serialised, then finally flows out of the transmitter as high-speed
+is serialised, then finally flows out of the transmitter as high-speed
 serial data.
 
 \begin{figure}[ht]
@@ -150,29 +150,36 @@ serial data.
 \end{figure}
 
 We looked to modify the functionality of a basic implementation of the
-transmitter. In the basic implementation a PRBS generator that generates a
-sequence through shift registers (as outlined in
-Section~\ref{ssub:prbs_generation}) is fed to the transmitter interface. 
+transmitter. In the basic implementation the output of a PRBS generator is fed
+to the transmitter interface through a wrapper as in
+Figure~\ref{fig:tx_interface}.
 
-There were two variations of the PRBS generation module that were developed.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/tx_interface.png}
+    \caption{Generator to TX Interface}%
+    \label{fig:tx_interface}
+\end{figure}
+
+\noindent There were two variations of the PRBS generation module that were developed.
 
 \subsubsection{Burst Mode over Single Channel}%
 \label{ssub:burst_mode_over_single_channel}
-Here we modified the PRBS generation module and set it to output zeros if the
+Here we modified the PRBS generation module by setting it to output zeros if the
 enable command was not asserted.  In combination we added a register
-inside the wrapper, which on overflow toggles the enable flag. This has the
+to the wrapper, which on overflow toggles the enable flag. This has the
 effect of causing the PRBS module to output a sequence interspersed with zeros.
 The code can be found in Section~\ref{sec:single_channel_burst_mode}.
 
-A testbench where both the unmodified PRBS generator and burst PRBS generator
+A testbench where the unmodified PRBS generator and burst PRBS generator
 are compared is shown in in Figure~\ref{fig:burst_mode_start}.  We see the
-burst generator correctly generating the expected PRBS sequence interspersed
+burst generator generating the expected result: a PRBS sequence interspersed
 with zeros. We note also that the full sequence is transmitted in burst mode (no
 data is lost).
 
 \begin{figure}[ht]
     \centering
-    \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_mode_1.png}
+    \hspace*{-3cm}\includegraphics[width=1.4\linewidth]{img/burst_mode_1.png}
     \caption{Single Burst Mode Behaviour}%
     \label{fig:burst_mode_start}
 \end{figure}
@@ -180,23 +187,24 @@ data is lost).
 Comparing Figure~\ref{fig:normal_mode_recur} and
 Figure~\ref{fig:burst_mode_recur} we see that the recurrence time (in this
 testbench we use PRBS7, as it is a short sequence) for the normal sequence is
-about half of the burst mode sequence. This is expected as the burst mode
+about half that of the burst mode sequence. This is expected as the burst mode
 sequence is operating on a duty cycle of 50\% and hence should take double the
 time to recur.
 
 \begin{figure}[ht]
     \centering
-    \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_mode_2.png}
+    \hspace*{-3cm}\includegraphics[width=1.4\linewidth]{img/burst_mode_2.png}
     \caption{Normal Mode Recur Time}%
     \label{fig:normal_mode_recur}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
-    \hspace*{-3cm}\includegraphics[width=1.5\linewidth]{img/burst_mode_3.png}
+    \hspace*{-3cm}\includegraphics[width=1.4\linewidth]{img/burst_mode_3.png}
     \caption{Burst Mode Recur Time}%
     \label{fig:burst_mode_recur}
 \end{figure}
+
 
 \subsubsection{Switching Between Two Channels}%
 \label{ssub:switching_between_two_channels}
@@ -229,6 +237,16 @@ rest of the board.
     \label{fig:receiver_block}
 \end{figure}
 
+In the basic implementation the RX interface passes data to the PRBS checker
+through a wrapper. We looked to modify the wrapper so that burst mode checking
+would work correctly.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.6\linewidth]{img/rx_interface.png}
+    \caption{RX Interface to Checker}%
+    \label{fig:rx_interface}
+\end{figure}
+\cleardoublepage
 \subsubsection{Burst Mode Checking}%
 \label{ssub:burst_mode_checking}
 In burst mode checking there are periods when the incoming bitstream is all
@@ -253,8 +271,12 @@ However, when passed through the transceiver, the PRBS checker found errors
 consistently, as shown in Figure~\ref{fig:burst_check_2}.  These errors appear
 to originate in situations where zeros are sent to the TX interface, but some
 bits are received at the RX interface.  We suspect that this may be due to some
-encoding by the transceiver, but were unable to pinpoint the cause before the
-end of the project.
+encoding by the transceiver, but were unable to pinpoint the exact cause before the
+end of the project. 
+There are other workarounds that may have been possible, such as
+loading the entire sequence into memory and processing it there to remove the
+zeros, or by sending shorter sequences, so that each burst would contain a full
+sequence, but we were not able to explore this fully.
 
 \begin{figure}[ht]
     \centering
@@ -268,15 +290,15 @@ end of the project.
 In the case where two transmitters were muxed together and were sent to a
 single receiver, it should not have been necessary to change the behaviour of
 the PRBS checking module.
-We were unable to experiment with this due to the closing of the lab.
+We were unable to check this due to the closing of the lab.
 
 \subsubsection{Disabling The CDR}%
 \label{ssub:disabling_the_cdr}
 The receiver CDR block detailed block diagram is shown in
 Figure~\ref{fig:cdr_detail}. We see it operates as a control system similar to
-what is described in Section~\ref{ssub:clock_and_data_recovery}, where the
+what is described in Section~\ref{ssub:clock_and_data_recovery}:
 incoming data is sampled by edge and data samplers to get phase information,
-which is then passed to a state machine which makes decisions on how to adjust
+which is passed to a state machine which makes decisions on how to adjust
 the phase of the local clock (provided by the PLL) using phase interpolators.
 
 \begin{figure}[ht]
@@ -286,52 +308,66 @@ the phase of the local clock (provided by the PLL) using phase interpolators.
     \label{fig:cdr_detail}
 \end{figure}
 
-The final of the project would have been to run the receiver source-synchronously.  The
-transceiver did not allow much flexibility here. We attempted to do this was by
-disabling the CDR and using the same clock to drive the receiver and
-transmitter, ideally then we take readings of phase, and then make the
-necessary compensations.
+The final goal of the project would have been to run the receiver
+source-synchronously.  The transceiver did not allow much flexibility here, and
+were limited to the configuration options that were offered by the Xilinx IP.
+We were not able to bypass the CDR entirely. We attemped to mimic this a much
+as possible by locking the CDR to reference clock and using the same clock to
+drive the receiver and transmitter, ideally then taking readings of phase, and
+making the necessary compensations.
  
 We were able to disable the CDR by asserting the CDRHOLD ports. This was done
-by hardcoding the CDRHOLD value. We further extended this by adding CDRHOLD
-in conjunction with the QPLLLOCK and RXCDRLOCK ports to the Xilinx Virtual
-Input/Output (VIO) which allowed us to toggle the CDR.
-
-The link became unstable after the port was asserted.  
+by hardcoding the CDRHOLD value. We further extended this by adding CDRHOLD in
+conjunction with the QPLLLOCK and RXCDRLOCK ports to the Xilinx Virtual
+Input/Output (VIO) which allowed us to toggle the CDR.  The link became
+unstable after the port was asserted.  
 
 We were then unable to read the phase. The phase caching paper by Kari, et al.
-\cite{kari_phase} was done on Xilinx Ultra-scale board and they were able to
+\cite{kari_phase} was done on Xilinx Ultra-Scale board and they were able to
 read and modify the phase by reading/writing values to the appropriate register.
-However the details of that implementation were specific to the Ultra-scale
-boards. The board used in the project is an Ultra-scale+ board and there is no
+However the details of that implementation were specific to the Ultra-Scale
+boards. The board used in the project is an Ultra-Scale+ board and there is no
 publicly available information on how to modify/read the phase. 
 As such we were unable to explore this further.
 
+\cleardoublepage
 \section{Optical Transmission}%
 \label{optical_transmission}
-This part of the project was not completed as the labs were closed. However
-some hardware was prepared, and is described in the following sections.
+We were not able to test this hardware in conjuction with the burst mode
+transmission, as the labs closed due to external factors. However the boards
+were used in other projects that took place in the research group, including a
+recent paper where machine learning was used to optimise the switching times of
+the SOA \cite{gerard2020swift}.
 
 \subsection{SOA Board}%
 \label{sub:soa_board}
-The design consisted of an Inphenix IPSAD1502 using input from a 
+The design consisted of a commercial Inphenix IPSAD1502 using input from a 
 matched RF line to modulate an incoming laser. The SOA was also temperature
-controlled at around 20 degrees Celsius.  The circuit diagram can be seen in
-Figure~\ref{fig:soa_circuit} (developed by Dennis Goh).
+controlled at 25 degrees Celsius. 
+The driving current was 200mA. As the input resistors are $50\Omega$, the power
+dissipation is 2W, and the resistors must be rated as such.
 
-We prepared 4 PCBs. The PCB design can be found in Appendix~\ref{cha:soa_pcb}.
+\noindent
+The circuit diagram can be seen in Figure~\ref{fig:soa_circuit} (developed by
+Dennis Goh).
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1.1\linewidth]{img/soa_circuit.png}
+    \hspace*{-1cm}\includegraphics[width=1.3\linewidth]{img/soa_circuit.png}
     \caption{SOA circuit}%
     \label{fig:soa_circuit}
 \end{figure}
 
+\noindent
+4 PCBs were prepared and made. The PCB design can be found in Appendix~\ref{cha:soa_pcb}.
+The Temprature Controller was connected to the IC uing a 9-pin D-type
+connector.
+
+\cleardoublepage 
 \subsection{Heatsink and Mount}%
 \label{sub:heatsink_and_mount}
 It was also necessary to attach a aluminium substrate underneath the PCB board
-for heat dissipation. An Aluminium substrate was machined to match (as shown in
+for heat dissipation. An Aluminium substrate was machined to match the PCB (as shown in
 Appendix~\ref{cha:substrate}), then the SOA was placed in contact with the
 substrate.  We then stacked the four boards above each other as in
 Figure~\ref{fig:full_mount}.
@@ -342,7 +378,3 @@ Figure~\ref{fig:full_mount}.
     \caption{Stacked Boards}%
     \label{fig:full_mount}
 \end{figure}
-
-
-
-

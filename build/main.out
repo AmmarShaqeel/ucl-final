@@ -17,11 +17,15 @@
 \BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 SOA Board}{section.4.2}% 17
 \BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Heatsink and Mount}{section.4.2}% 18
 \BOOKMARK [0][]{chapter.5}{5 Conclusion}{}% 19
-\BOOKMARK [0][]{chapter*.38}{Bibliography}{}% 20
+\BOOKMARK [0][]{chapter*.40}{Bibliography}{}% 20
 \BOOKMARK [0][]{appendix.U}{A Transceiver Settings}{}% 21
-\BOOKMARK [0][]{appendix.V}{B Verilog Code}{}% 22
-\BOOKMARK [1][-]{section.V.1}{B.1 Single Channel Burst Mode}{appendix.V}% 23
-\BOOKMARK [1][-]{section.V.2}{B.2 Two Channel Burst Mode}{appendix.V}% 24
-\BOOKMARK [1][-]{section.V.3}{B.3 Burst Mode Checking}{appendix.V}% 25
-\BOOKMARK [0][]{appendix.W}{C SOA PCB Design}{}% 26
-\BOOKMARK [0][]{appendix.X}{D Substrate Design}{}% 27
+\BOOKMARK [1][-]{section.U.1}{A.1 Transceiver Wizard Settings}{appendix.U}% 22
+\BOOKMARK [1][-]{section.U.2}{A.2 External Clock Settings}{appendix.U}% 23
+\BOOKMARK [1][-]{section.U.3}{A.3 Constraints}{appendix.U}% 24
+\BOOKMARK [0][]{appendix.V}{B Verilog Code}{}% 25
+\BOOKMARK [1][-]{section.V.1}{B.1 PRBS Generator/Checker Module}{appendix.V}% 26
+\BOOKMARK [1][-]{section.V.2}{B.2 Single Channel Burst Mode}{appendix.V}% 27
+\BOOKMARK [1][-]{section.V.3}{B.3 Two Channel Burst Mode}{appendix.V}% 28
+\BOOKMARK [1][-]{section.V.4}{B.4 Burst Mode Checking}{appendix.V}% 29
+\BOOKMARK [0][]{appendix.W}{C SOA PCB Design}{}% 30
+\BOOKMARK [0][]{appendix.X}{D Substrate Design}{}% 31
