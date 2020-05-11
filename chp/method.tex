@@ -188,7 +188,7 @@ Comparing Figure~\ref{fig:normal_mode_recur} and
 Figure~\ref{fig:burst_mode_recur} we see that the recurrence time (in this
 testbench we use PRBS7, as it is a short sequence) for the normal sequence is
 about half that of the burst mode sequence. This is expected as the burst mode
-sequence is operating on a duty cycle of 50\% and hence should take double the
+sequence is operating on a duty cycle of 50\% and hence should take roughly double the
 time to recur.
 
 \begin{figure}[ht]
@@ -208,7 +208,7 @@ time to recur.
 
 \subsubsection{Switching Between Two Channels}%
 \label{ssub:switching_between_two_channels}
-Here the PRBS wrapper was changed to feed the two different outputs. The PRBS
+Here the PRBS wrapper was changed to feed two different outputs. The PRBS
 generator was unchanged. We added a register which on overflow alternated the
 output of the generator module. The code can be found in Section~\ref{sec:two_channel_burst_mode} 
 This had the overall effect of having the whole sequence be sent over two
@@ -228,7 +228,7 @@ different channels as shown in Figure~\ref{fig:two_channel_tx}.
 \label{sub:receiver}
 In Figure~\ref{fig:receiver_block} we see a block diagram of the receiver
 (RX) of the transceiver. Serial data flows into the reciever, is deserialised,
-and is finally passed to the RX Interface where it can then be passed to the
+and is finally passed to the RX Interface from where it can be passed to the
 rest of the board. 
 \begin{figure}[ht]
     \centering
@@ -367,7 +367,7 @@ connector.
 \subsection{Heatsink and Mount}%
 \label{sub:heatsink_and_mount}
 It was also necessary to attach a aluminium substrate underneath the PCB board
-for heat dissipation. An Aluminium substrate was machined to match the PCB (as shown in
+for heat dissipation. An aluminium substrate was machined to match the PCB (as shown in
 Appendix~\ref{cha:substrate}), then the SOA was placed in contact with the
 substrate.  We then stacked the four boards above each other as in
 Figure~\ref{fig:full_mount}.

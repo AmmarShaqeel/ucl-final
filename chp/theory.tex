@@ -96,7 +96,7 @@ signal, as shown in Figure~\ref{fig:source_sync}. This has the advantage of not
 needing a CDR circuit. Furthermore as both the clock and the data come from the
 same device any jitter will be similar across both signals and can likely be
 ignored \cite{ragab2011receiver}.   A downside is that there will be crossing
-of clock domains at the reciever as the transmitted clock will not be
+of clock domains at the receiver as the transmitted clock will not be
 synchronous with the clock domain of the receiving device.
 \begin{figure}[ht]
     \centering
@@ -170,7 +170,7 @@ lower data rates. This is done by oversampling the data. However it may not be
 applicable as it essentially operates as an IP that is placed after the
 transceiver interface and does not directly effect the behaviour of the
 transceiver. However it remains of interest as it may be easier to demonstrate a
-working system with lower data rates as a lower data rate would be forgiving in
+working system with lower data rates, as a lower data rate would be forgiving in
 term of sampling/clock accuracy.
 
 \noindent \cite{williams2016source} described an optical source synchronous
@@ -181,17 +181,18 @@ to track correlated jitter between clock and data channels, and how system
 performance can be degraded by channel slew between clock and data channels.
 If the project is run at a lower data rate over multiple channels, this means
 that the jitter between the channels should be correlated if they are coming
-from the same device which would minimise the effects of such jitter.
+from the same device, which would minimise the effects of such jitter.
 
 \cleardoublepage
 
-\noindent \cite{williams2019reconfiguration} further explored reducing the modal
-crosstalk by proposing an architecture with re-configurable clock and data
-paths, thus allowing the user to chose the optimal lane for the sensitive clock
-for each photonic interconnect. This is unlikely to be needed in this project, as each
-transmitter should have a fixed data characteristic, and as the hardware for
-both transmitters is similar, they should have a similar data characteristic. 
-In a situation where there are many different transmitters this may be useful.
+\noindent \cite{williams2019reconfiguration} further explored reducing the
+modal crosstalk by proposing an architecture with re-configurable clock and
+data paths, thus allowing the user to chose the optimal lane (least crosstalk)
+for the clock for each photonic interconnect. This is unlikely to be needed in
+this project, as each transmitter should have a fixed data characteristic, and
+as the hardware for both transmitters is similar, they should have a similar
+data characteristic.  In a situation where there are many different
+transmitters this may be useful.
 
 \noindent In \cite{serrano2013white}, \cite{moreira2010digital}, and
 \cite{moreira2009white}, the white rabbit project is discussed. A white rabbit

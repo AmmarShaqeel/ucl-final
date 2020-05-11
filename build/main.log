@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  11 MAY 2020 02:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7380 64-bit) (preloaded format=pdflatex 2020.3.28)  11 MAY 2020 09:38
 entering extended mode
 **./main.tex
 (main.tex
@@ -1278,8 +1278,7 @@ Overfull \hbox (61.1995pt too wide) in paragraph at lines 203--204
  []| [] 
  []
 
-[12 <./img/burst_mode_1.png> <./img/burst_mode_2.png> <./img/burst_mode_3.png>]
-<img/two_channel.png, id=397, 1038.88126pt x 245.41687pt>
+<img/two_channel.png, id=386, 1038.88126pt x 245.41687pt>
 File: img/two_channel.png Graphic file (type png)
 <use img/two_channel.png>
 Package pdftex.def Info: img/two_channel.png  used on input line 220.
@@ -1289,7 +1288,8 @@ Overfull \hbox (61.1995pt too wide) in paragraph at lines 220--221
  []| [] 
  []
 
-[13 <./img/two_channel.png>]
+[12 <./img/burst_mode_1.png> <./img/burst_mode_2.png>] [13 <./img/burst_mode_3.
+png> <./img/two_channel.png>]
 <img/receiver_block.png, id=406, 796.47563pt x 344.78813pt>
 File: img/receiver_block.png Graphic file (type png)
 <use img/receiver_block.png>
@@ -1704,7 +1704,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 565.
 Here is how much of TeX's memory you used:
  26061 strings out of 480894
  509675 string characters out of 2908216
- 828240 words of memory out of 3000000
+ 828241 words of memory out of 3000000
  41173 multiletter control sequences out of 15000+200000
  547559 words of font info for 54 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1728,7 +1728,7 @@ uper/sfrm1200.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sfrm
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt0900.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/cm-super/sftt1000.pfb>
 Output written on C:\Users\ammar_laptop\Documents\thesis\build\main.pdf (44 pag
-es, 6433296 bytes).
+es, 6433231 bytes).
 PDF statistics:
  708 PDF objects out of 1000 (max. 8388607)
  145 named destinations out of 1000 (max. 500000)
